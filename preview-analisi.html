@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapei, Analisi Reputazione Digitale 2026 · Anteprima</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#E52217;--white:#FFFFFF;--gray-light:#F4F5F6;--gray-dark:#191919;
+  --green:#118541;--blue:#5781FF;--violet:#551FC4;--pink:#CE2A59;--orange:#DB5E29;
+  --gray-text:#595959;--gray-chart:#484848;
+  --red-10:#FFE7E6;--red-20:#FFCFCE;--red-40:#FF9A97;--red-60:#FF6560;--red-80:#FF302A;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif;font-size:14px;color:var(--gray-text);background:#fff;line-height:1.6}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:var(--gray-dark);padding:0 32px;display:flex;align-items:center;gap:0;border-bottom:3px solid var(--red)}
+nav a{color:#ccc;text-decoration:none;font-size:10px;font-weight:600;text-transform:uppercase;padding:14px 11px;display:block;letter-spacing:.05em;transition:color .2s,background .2s;white-space:nowrap}
+nav a:hover,nav a.active{color:#fff;background:rgba(255,255,255,.08)}
+.nav-brand{margin-right:auto;color:#fff;font-weight:700;font-size:13px;letter-spacing:.05em;padding:14px 0;white-space:nowrap;display:flex;align-items:center}
+.nav-brand img{height:18px;display:block;filter:brightness(0) invert(1)}
+
+/* ── COVER ── */
+.cover{background:var(--gray-dark);color:#fff;padding:80px;min-height:460px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;top:0;right:0;width:360px;height:100%;background:var(--red);opacity:.10;clip-path:polygon(80px 0,100% 0,100% 100%,0 100%)}
+.cover::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--red),transparent)}
+.cover-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:rgba(255,255,255,.4);margin-bottom:14px}
+.cover h1{font-size:52px;font-weight:800;text-transform:uppercase;line-height:1.05;color:#fff;margin-bottom:10px;letter-spacing:-.01em}
+.cover h1 span{color:var(--red)}
+.cover-date{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:28px;letter-spacing:.04em}
+.cover-tags{display:flex;flex-wrap:wrap;gap:6px}
+.cover-tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7);padding:5px 12px;border-radius:3px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+
+/* ── LAYOUT ── */
+.section-wrap{padding:56px 80px;max-width:1280px;margin:0 auto}
+.section-bg{background:var(--gray-light)}
+
+/* ── SECTION HEADER ── */
+.section-header{margin-bottom:40px}
+.section-eyebrow{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--red);margin-bottom:8px}
+.section-title{font-size:24px;font-weight:500;text-transform:uppercase;color:var(--gray-dark);margin-bottom:6px;letter-spacing:.02em}
+.section-subtitle{font-size:13px;color:var(--gray-text);max-width:720px;line-height:1.6}
+
+/* ── EXECUTIVE SUMMARY ── */
+.exec-box{background:#fff;border:1px solid #E5E7EA;border-radius:8px;padding:36px 44px;margin-bottom:32px;border-left:4px solid var(--gray-dark)}
+.exec-box p{font-size:14px;color:var(--gray-text);line-height:1.85;margin-bottom:12px}
+.exec-box p:last-child{margin-bottom:0}
+.exec-box strong{color:var(--gray-dark)}
+
+/* ── KPI SNAPSHOT ── */
+.kpi-snapshot{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.kpi-snap-card{background:#fff;border:1px solid #E5E7EA;border-radius:6px;padding:20px 16px;text-align:center}
+.kpi-snap-val{font-size:32px;font-weight:800;color:var(--gray-dark);line-height:1;letter-spacing:-.02em}
+.kpi-snap-val.red{color:var(--red)}
+.kpi-snap-val.green{color:var(--green)}
+.kpi-snap-val.blue{color:var(--blue)}
+.kpi-snap-val.orange{color:var(--orange)}
+.kpi-snap-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-text);margin-top:7px}
+.kpi-snap-sub{font-size:10px;color:#bbb;margin-top:3px}
+
+/* ── SECTION DIVIDER ── */
+.section-divider{height:1px;background:linear-gradient(90deg,var(--red) 0%,#E5E7EA 40%,transparent 100%)}
+
+/* ── METRIC BLOCK ── */
+.metric-section{margin-bottom:40px}
+.metric-row{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start;padding:32px 0;border-bottom:1px solid #F0F0F0}
+.metric-row:last-child{border-bottom:none}
+.metric-left{text-align:left}
+.metric-big-val{font-size:52px;font-weight:800;color:var(--gray-dark);line-height:1;letter-spacing:-.03em}
+.metric-big-val.red{color:var(--red)}
+.metric-big-val.green{color:var(--green)}
+.metric-big-val.blue{color:var(--blue)}
+.metric-big-val.orange{color:var(--orange)}
+.metric-unit{font-size:16px;font-weight:400;color:#aaa}
+.metric-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-top:8px}
+.metric-source{font-size:10px;color:#bbb;margin-top:4px}
+.metric-comment{font-size:14px;color:var(--gray-dark);font-weight:600;line-height:1.5;margin-bottom:12px}
+.metric-body{font-size:13px;color:var(--gray-text);line-height:1.75;margin-bottom:16px}
+
+.benchmark-inline{display:inline-flex;align-items:center;gap:8px;background:var(--gray-light);border-radius:4px;padding:6px 12px;font-size:11px;margin-bottom:16px}
+.benchmark-inline strong{color:var(--gray-dark)}
+.benchmark-inline span{color:var(--gray-text)}
+
+.note-inline{background:#FFFBF0;border:1px solid #F5E6B0;border-radius:5px;padding:12px 16px;margin-bottom:16px;font-size:12px;color:var(--gray-text);line-height:1.6}
+.note-inline strong{color:#966A00}
+.note-inline-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#966A00;margin-bottom:5px}
+
+.rog-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.rog-card{border-radius:5px;padding:14px 16px}
+.rog-card.rischio{background:#FEE8E7;border-left:3px solid var(--red)}
+.rog-card.azione{background:#E8F5EE;border-left:3px solid var(--green)}
+.rog-card-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.rischio .rog-card-label{color:var(--red)}
+.azione .rog-card-label{color:var(--green)}
+.rog-card p{font-size:12px;color:var(--gray-text);line-height:1.5}
+
+/* ── EXTERNAL SOURCE NOTE ── */
+.ext-source-note{background:#FFFBF0;border:1px solid #F5E6B0;border-radius:6px;padding:12px 18px;margin-bottom:32px;font-size:12px;color:#7A5500;display:flex;align-items:flex-start;gap:12px;line-height:1.6}
+.ext-source-note-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.ext-source-note strong{color:#5C3D00}
+.fonte-link{color:var(--blue);text-decoration:none;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid rgba(87,129,255,.35)}
+.fonte-link:hover{color:#3560d0;border-bottom-color:var(--blue)}
+.mkt-source-tag{display:inline-flex;align-items:center;gap:4px;background:#FFFBF0;border:1px solid #F5E6B0;border-radius:3px;padding:2px 8px;font-size:9px;font-weight:700;color:#966A00;text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+
+/* ── SENTIMENT MAP ── */
+.sentiment-map{background:#fff;border:1px solid #E5E7EA;border-radius:8px;padding:32px;margin-bottom:0}
+.sentiment-map-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-dark);margin-bottom:24px}
+.sm-row{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.sm-source{font-size:12px;font-weight:600;color:var(--gray-dark);width:180px;flex-shrink:0}
+.sm-bars{flex:1;display:flex;gap:2px;height:20px}
+.sm-bar-pos{background:var(--green);border-radius:2px 0 0 2px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+.sm-bar-neu{background:#FFC34A;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+.sm-bar-neg{background:var(--red);border-radius:0 2px 2px 0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+.sm-legend{display:flex;gap:20px;margin-top:16px}
+.sm-leg-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gray-text)}
+.sm-leg-dot{width:10px;height:10px;border-radius:2px}
+
+/* ── POSIZIONAMENTO CARDS ── */
+.positioning-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.pos-card{background:#fff;border:1px solid #E5E7EA;border-radius:8px;padding:24px;border-top:3px solid transparent}
+.pos-card.forza{border-top-color:var(--green)}
+.pos-card.debol{border-top-color:var(--red)}
+.pos-num{font-size:36px;font-weight:800;color:#F0F0F0;line-height:1;margin-bottom:10px}
+.pos-title{font-size:13px;font-weight:700;color:var(--gray-dark);margin-bottom:8px}
+.pos-body{font-size:12px;color:var(--gray-text);line-height:1.6}
+
+/* ── FONTE TABS ── */
+.fonte-tab-nav{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:32px}
+.ftab-btn{background:#fff;border:1px solid #E5E7EA;border-radius:4px;padding:7px 14px;font-family:'Figtree',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--gray-text);cursor:pointer;transition:all .2s}
+.ftab-btn:hover{border-color:var(--red);color:var(--red)}
+.ftab-btn.active{background:var(--red);border-color:var(--red);color:#fff}
+.ftab-content{display:none}
+.ftab-content.active{display:block}
+.fonte-card{background:#fff;border:1px solid #E5E7EA;border-radius:8px;overflow:hidden}
+.fonte-header{padding:20px 28px;background:var(--gray-light);border-bottom:1px solid #E5E7EA;display:flex;align-items:center;justify-content:space-between;border-left:5px solid transparent}
+.fonte-name{font-size:18px;font-weight:700;text-transform:uppercase;color:var(--gray-dark);letter-spacing:.02em}
+.fonte-tipo{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-text);margin-top:3px}
+.fonte-body{padding:28px 32px}
+
+.fonte-kpi-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.fkpi{background:var(--gray-light);border-radius:5px;padding:14px 18px;text-align:center;min-width:110px}
+.fkpi-val{font-size:24px;font-weight:800;color:var(--gray-dark);line-height:1}
+.fkpi-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--gray-text);margin-top:3px}
+
+/* ── TEMI INTERATTIVI ── */
+.temi-container{margin-bottom:24px}
+.temi-help{font-size:10px;color:#bbb;font-style:italic;margin-top:4px;margin-bottom:10px}
+.temi-list{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:0}
+.tema-tag-btn{background:#fff;border:1px solid #D0D5DC;border-radius:3px;padding:5px 12px;font-size:10px;font-weight:600;color:var(--gray-dark);cursor:pointer;transition:all .15s;font-family:'Figtree',sans-serif;display:inline-flex;align-items:center;gap:5px}
+.tema-tag-btn:hover{border-color:var(--red);color:var(--red)}
+.tema-tag-btn.active{background:var(--red);border-color:var(--red);color:#fff}
+.tema-tag-btn .arrow{font-size:8px;display:inline-block;transition:transform .15s}
+.tema-tag-btn.active .arrow{transform:rotate(180deg)}
+.tema-panel{display:none;background:var(--gray-light);border-radius:5px;padding:16px 20px;margin-top:10px;border-left:3px solid var(--red)}
+.tema-panel.visible{display:block}
+.tema-panel-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:10px}
+.tema-comments{display:flex;flex-direction:column;gap:7px}
+.tema-comment{background:#fff;border-radius:4px;padding:10px 14px;font-size:11px;color:var(--gray-text);font-style:italic;line-height:1.6}
+.tema-comment-meta{font-size:9px;color:#bbb;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+
+/* ── FORZA / CRITICITÀ ── */
+.fd-two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.fd-col-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.fd-col-label.green{color:var(--green)}
+.fd-col-label.red{color:var(--red)}
+.fd-list{display:flex;flex-direction:column;gap:10px}
+.fd-item{background:var(--gray-light);border-radius:5px;padding:14px 16px;border-left:3px solid #DDD}
+.fd-item.pos{border-left-color:var(--green)}
+.fd-item.neg{border-left-color:var(--red)}
+.fd-item-title{font-size:12px;font-weight:700;color:var(--gray-dark);margin-bottom:4px}
+.fd-item-body{font-size:11px;color:var(--gray-text);line-height:1.55;margin-bottom:8px}
+.fd-quotes{display:flex;flex-direction:column;gap:5px}
+.fd-quote{background:#fff;border-radius:3px;padding:8px 12px;font-size:11px;color:var(--gray-text);font-style:italic;line-height:1.5;border-left:2px solid #E0E0E0}
+.fd-item.pos .fd-quote{border-left-color:rgba(17,133,65,.35)}
+.fd-item.neg .fd-quote{border-left-color:rgba(229,34,23,.35)}
+.fd-quote-meta{font-size:9px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.05em;font-style:normal;margin-top:3px}
+
+.kw-list{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.kw-tag{background:var(--gray-light);border:1px solid #E0E0E0;border-radius:20px;padding:4px 11px;font-size:10px;font-weight:600;color:var(--gray-text)}
+
+.fonte-risk-alert{background:#FEE8E7;border-radius:5px;padding:14px 18px;margin-bottom:16px;border-left:4px solid var(--red)}
+.fonte-risk-label{font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.fonte-risk-alert p{font-size:12px;color:var(--gray-text)}
+
+.note-box{background:#FFFBF0;border:1px solid #F5E6B0;border-radius:5px;padding:16px 20px;margin-bottom:0}
+.note-box h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#966A00;margin-bottom:8px}
+.note-box p{font-size:12px;color:var(--gray-text);line-height:1.7}
+.note-box strong{color:var(--gray-dark)}
+
+/* ── AI SECTION ── */
+.ai-engine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.ai-engine-card{background:#fff;border:1px solid #E5E7EA;border-radius:8px;padding:24px;border-top:3px solid transparent}
+.ai-engine-name{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.ai-score-big{font-size:48px;font-weight:800;color:var(--gray-dark);line-height:1}
+.ai-score-big span{font-size:18px;font-weight:400;color:#aaa}
+.ai-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.ai-mini{text-align:center;background:var(--gray-light);border-radius:4px;padding:9px 6px}
+.ai-mini-val{font-size:16px;font-weight:800;color:var(--gray-dark)}
+.ai-mini-label{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:#aaa;margin-top:2px;line-height:1.2}
+
+.ai-narrative-box{background:var(--gray-dark);color:#fff;border-radius:8px;padding:28px 36px;margin-bottom:32px;border-left:5px solid var(--orange)}
+.ai-narrative-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);margin-bottom:12px}
+.ai-narrative-box p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.85}
+.ai-narrative-box strong{color:#fff}
+
+.ai-comprehension-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+.ai-comp-col{border-radius:8px;padding:22px 26px}
+.ai-comp-col.sa{background:#E8F5EE;border:1px solid rgba(17,133,65,.2)}
+.ai-comp-col.non-sa{background:#FEE8E7;border:1px solid rgba(229,34,23,.2)}
+.ai-comp-col-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+.ai-comp-col.sa .ai-comp-col-label{color:var(--green)}
+.ai-comp-col.non-sa .ai-comp-col-label{color:var(--red)}
+.ai-comp-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ai-comp-col ul li{font-size:12px;color:var(--gray-text);padding-left:14px;position:relative;line-height:1.6}
+.ai-comp-col ul li::before{content:'●';position:absolute;left:0;font-size:7px;top:6px}
+.ai-comp-col.sa ul li::before{color:var(--green)}
+.ai-comp-col.non-sa ul li::before{color:var(--red)}
+.ai-comp-col ul li strong{color:var(--gray-dark)}
+
+.ai-comp-table-wrap{background:#fff;border:1px solid #E5E7EA;border-radius:8px;overflow:hidden;margin-bottom:8px}
+.ai-comp-table-wrap table{width:100%;border-collapse:collapse;font-size:12px}
+.ai-comp-table-wrap thead tr{background:var(--gray-dark);color:#fff}
+.ai-comp-table-wrap thead th{padding:10px 16px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.ai-comp-table-wrap tbody tr{border-bottom:1px solid #F0F0F0;transition:background .15s}
+.ai-comp-table-wrap tbody tr:hover{background:var(--gray-light)}
+.ai-comp-table-wrap tbody td{padding:9px 16px;color:var(--gray-text)}
+.ai-comp-table-wrap .client-row td{background:#FFF8F8!important;font-weight:600}
+.ai-score-pill{display:inline-block;padding:2px 9px;border-radius:2px;font-size:11px;font-weight:700}
+.ai-score-pill.alto{background:#E8F5EE;color:var(--green)}
+.ai-score-pill.medio{background:#FDF2EC;color:var(--orange)}
+.ai-score-pill.basso{background:#FEE8E7;color:var(--red)}
+.ai-sov-bar{background:#F0F0F0;border-radius:2px;height:5px;margin-top:4px;overflow:hidden;width:100px;display:inline-block}
+.ai-sov-fill{height:5px;border-radius:2px;background:var(--blue);display:block}
+.ai-sov-fill.client{background:var(--red)}
+
+/* ── OPPORTUNITÀ ── */
+.opp-intro{background:#EEF2FF;border:1px solid rgba(87,129,255,.2);border-radius:8px;padding:20px 28px;margin-bottom:28px}
+.opp-intro p{font-size:13px;color:var(--gray-text);line-height:1.7}
+.opp-intro strong{color:var(--gray-dark)}
+.opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.opp-card{background:#fff;border:1px solid #E5E7EA;border-radius:8px;padding:24px 28px;border-left:4px solid var(--blue)}
+.opp-card-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:8px}
+.opp-card-title{font-size:14px;font-weight:700;color:var(--gray-dark);margin-bottom:8px}
+.opp-card-body{font-size:12px;color:var(--gray-text);line-height:1.7}
+.opp-card-fonte{font-size:10px;color:#bbb;margin-top:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding-top:10px;border-top:1px solid #F0F0F0}
+
+/* ── STRATEGIC FOCUS ── */
+.strategic-intro{background:var(--gray-dark);color:#fff;border-radius:8px;padding:36px 44px;margin-bottom:32px;border-left:5px solid var(--red)}
+.strategic-intro-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--red);margin-bottom:12px}
+.strategic-intro p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.85}
+.strategic-intro strong{color:#fff}
+.focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px}
+.focus-card{background:#fff;border:1px solid #E5E7EA;border-radius:8px;padding:28px 32px}
+.focus-num{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.focus-num::before{content:'';display:inline-block;width:24px;height:2px;background:var(--red)}
+.focus-title{font-size:15px;font-weight:700;color:var(--gray-dark);margin-bottom:12px}
+.focus-body{font-size:13px;color:var(--gray-text);line-height:1.7}
+.focus-body p{margin-bottom:10px}
+.focus-body p:last-child{margin-bottom:0}
+
+/* ── ACTION PLAN ── */
+.action-placeholder-box{background:var(--gray-light);border:2px dashed #D0D5DC;border-radius:8px;padding:52px 40px;text-align:center}
+.action-ph-title{font-size:18px;font-weight:700;color:var(--gray-dark);margin-bottom:10px}
+.action-ph-sub{font-size:13px;color:var(--gray-text);max-width:520px;margin:0 auto 28px;line-height:1.7}
+.action-spreadsheet-btn{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#fff;padding:13px 28px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.02em;transition:background .2s}
+.action-spreadsheet-btn:hover{background:#0d6b34;color:#fff}
+.action-priority-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;padding:14px 20px;background:#fff;border-radius:6px;border:1px solid #E5E7EA;justify-content:center}
+
+/* ── BADGE ── */
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.badge::before{content:'●';font-size:7px}
+.badge-green{background:#E8F5EE;color:var(--green)}
+.badge-orange{background:#FDF2EC;color:var(--orange)}
+.badge-red{background:#FEE8E7;color:var(--red)}
+.badge-blue{background:#EEF2FF;color:var(--blue)}
+.badge-gray{background:#EBEBEB;color:var(--gray-chart)}
+
+/* ── COMPETITOR TABLE ── */
+.comp-table-wrap{background:#fff;border:1px solid #E5E7EA;border-radius:8px;overflow:hidden;margin-bottom:20px}
+.comp-table-wrap table{width:100%;border-collapse:collapse;font-size:12px}
+.comp-table-wrap thead tr{background:var(--gray-dark);color:#fff}
+.comp-table-wrap thead th{padding:10px 16px;text-align:left;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.comp-table-wrap tbody tr{border-bottom:1px solid #F0F0F0;transition:background .15s}
+.comp-table-wrap tbody tr:hover{background:var(--gray-light)}
+.comp-table-wrap tbody td{padding:9px 16px;color:var(--gray-text)}
+.comp-table-wrap .highlight-row td{background:#FFF8F8!important}
+.rank-dot{font-size:10px;font-weight:700;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#E0E0E0;color:var(--gray-dark)}
+.rank-dot.active{background:var(--red);color:#fff}
+.visit-bar-inline{background:#F0F0F0;border-radius:2px;height:4px;margin-top:3px;overflow:hidden;width:120px;display:inline-block}
+.visit-bar-fill{height:4px;border-radius:2px;background:var(--red);display:block}
+.visit-bar-fill-gray{height:4px;border-radius:2px;background:#BDBDBD;display:block}
+
+/* ── MARKET KPI ── */
+.mkt-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px}
+.mkt-kpi{background:#fff;border:1px solid #E5E7EA;border-radius:7px;padding:20px 22px;border-top:3px solid var(--red)}
+.mkt-kpi-val{font-size:28px;font-weight:800;color:var(--gray-dark);line-height:1;letter-spacing:-.01em}
+.mkt-kpi-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-text);margin-top:6px}
+.mkt-kpi-trend{font-size:11px;font-weight:700;color:var(--green);margin-top:4px}
+.mkt-kpi-sub{font-size:10px;color:#bbb;margin-top:2px}
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+.insight-card{background:#fff;border:1px solid #E5E7EA;border-radius:7px;padding:18px 22px;border-left:4px solid var(--blue)}
+.insight-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:7px}
+.insight-card h4{font-size:13px;font-weight:700;color:var(--gray-dark);margin-bottom:7px}
+.insight-card p{font-size:12px;color:var(--gray-text);line-height:1.6}
+.insight-fonte{font-size:10px;color:#bbb;margin-top:8px}
+.insight-fonte a{color:var(--blue);text-decoration:none;font-weight:600}
+
+/* ── FOOTER ── */
+footer{background:var(--gray-dark);padding:28px 80px;display:flex;align-items:center;justify-content:space-between}
+footer p{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.07em}
+
+@media print{nav{display:none}.ftab-content{display:block!important}.fonte-tab-nav{display:none}.tema-panel{display:block!important}section{page-break-inside:avoid}}
+@media(max-width:900px){.section-wrap{padding:40px 24px}.cover{padding:40px 24px}.kpi-snapshot,.positioning-grid,.ai-engine-grid,.focus-grid,.mkt-kpi-grid,.insight-grid,.fd-two-col,.ai-comprehension-grid,.opp-grid{grid-template-columns:repeat(2,1fr)}nav{overflow-x:auto}footer{flex-direction:column;gap:16px;text-align:center}}
+
+/* ── PREVIEW BANNER (top of page) ── */
+.preview-banner-wrap{background:var(--gray-light);padding:14px 32px;border-bottom:1px solid #E5E7EA}
+.preview-banner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:12px;background:var(--red-10);border:1px solid var(--red-20);border-radius:6px;padding:10px 20px;font-size:11px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:.06em}
+.preview-banner svg{flex-shrink:0}
+.preview-banner strong{font-weight:800;letter-spacing:.08em}
+.preview-banner-text{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.preview-banner-text span.sep{opacity:.5}
+
+/* ── PREVIEW BLUR GATE (locked sections) ── */
+.preview-section{position:relative;overflow:hidden;max-height:860px}
+#feedback.preview-section{max-height:1100px}
+#feedback.preview-section .preview-blur{background:linear-gradient(to bottom,rgba(244,245,246,0) 0%,rgba(244,245,246,0) 55%,rgba(244,245,246,.75) 78%,rgba(244,245,246,.97) 92%,#F4F5F6 100%)}
+#ai.preview-section{max-height:900px}
+#ai.preview-section .preview-blur{background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,.75) 75%,rgba(255,255,255,.97) 92%,#fff 100%)}
+#opportunita.preview-section{max-height:540px}
+#strategia.preview-section{max-height:540px}
+#action-plan.preview-section{max-height:480px}
+.preview-blur{position:absolute;bottom:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,.7) 72%,rgba(255,255,255,.97) 88%,#fff 100%);z-index:10;pointer-events:none}
+.preview-section-bg .preview-blur{background:linear-gradient(to bottom,rgba(244,245,246,0) 0%,rgba(244,245,246,0) 50%,rgba(244,245,246,.7) 72%,rgba(244,245,246,.97) 88%,#F4F5F6 100%)}
+.preview-gate{position:absolute;bottom:0;left:0;width:100%;z-index:20;display:flex;flex-direction:column;align-items:center;padding:40px 40px 56px;text-align:center}
+.preview-gate-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--red);margin-bottom:10px}
+.preview-gate h3{font-size:22px;font-weight:800;text-transform:uppercase;color:var(--gray-dark);margin-bottom:10px;letter-spacing:.01em}
+.preview-gate p{font-size:13px;color:var(--gray-text);max-width:480px;line-height:1.7;margin-bottom:24px}
+.preview-cta{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:'Figtree',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:14px 28px;border-radius:4px;text-decoration:none;border:none;cursor:pointer;transition:opacity .2s}
+.preview-cta:hover{opacity:.88}
+@media(max-width:900px){.preview-cta{padding:12px 24px;font-size:11px}.preview-banner{font-size:10px;padding:9px 14px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Mapei_logo.svg/3840px-Mapei_logo.svg.png" alt="Mapei"></span>
+  <a href="#executive">Executive Summary</a>
+  <a href="#mercato">Mercato</a>
+  <a href="#posizionamento">Posizionamento</a>
+  <a href="#feedback">Feedback Clienti</a>
+  <a href="#ai">Visibilità AI</a>
+  <a href="#opportunita">Opportunità</a>
+  <a href="#strategia">Strategia</a>
+  <a href="#action-plan">Action Plan</a>
+</nav>
+
+<!-- PREVIEW BANNER -->
+<div class="preview-banner-wrap">
+  <div class="preview-banner">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1.17a5.83 5.83 0 1 0 0 11.66A5.83 5.83 0 0 0 7 1.17Zm0 9.33a.7.7 0 1 1 0-1.4.7.7 0 0 1 0 1.4Zm.58-3.27a.58.58 0 0 1-1.16 0V4.08a.58.58 0 1 1 1.16 0v3.15Z" fill="currentColor"/></svg>
+    <div class="preview-banner-text">
+      <strong>Anteprima Demo</strong>
+      <span class="sep">·</span>
+      <span>Alcune sezioni sono limitate &mdash; versione completa disponibile su richiesta</span>
+    </div>
+  </div>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <img style="position:absolute;top:40px;left:80px;opacity:.9" src="https://mocainteractive.com/assets/svg/logo-light.svg" alt="moca interactive" height="26">
+  <div class="cover-label">Analisi Reputazione Digitale &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Anteprima</div>
+  <h1>ANALISI <span>MAPEI</span></h1>
+  <div class="cover-date">Maggio 2026 &nbsp;·&nbsp; 6 fonti analizzate &nbsp;·&nbsp; 400+ recensioni/menzioni</div>
+  <div class="cover-tags">
+    <span class="cover-tag">Google Maps</span>
+    <span class="cover-tag">Trustpilot</span>
+    <span class="cover-tag">Reddit</span>
+    <span class="cover-tag">Social Media</span>
+    <span class="cover-tag">AEO / GEO Audit</span>
+    <span class="cover-tag">Statista / Mercato</span>
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div id="executive">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Executive Summary</div>
+    <div class="section-title">Sintesi dell'Analisi</div>
+    <div class="section-subtitle">Lettura integrata di tutte le fonti · Maggio 2026</div>
+  </div>
+
+  <div class="exec-box">
+    <p>Mapei è il leader mondiale nei prodotti chimici per l'edilizia, con un fatturato consolidato di <strong>€4,4 miliardi nel 2024</strong> (+4,7% rispetto all'anno precedente) e una rete di 106 stabilimenti produttivi in oltre 100 paesi. L'analisi cross-fonte, condotta su Google Maps, Trustpilot, Reddit, social media istituzionali, AEO/GEO Audit SEOZoom e dati Statista, restituisce l'immagine di un brand con una reputazione tecnica solidissima presso i professionisti del settore, ma con segnali critici sui canali di recensione pubblica destinati al mercato B2C e DIY.</p>
+    <p>Il <strong>posizionamento sugli AI engine è eccellente</strong>: AEO score medio di 87/100 su ChatGPT (85), Perplexity (87) e Gemini (89), con Mapei identificata come leader di mercato da tutti e tre i sistemi. Il sentiment sociale istituzionale conferma questa percezione positiva (91% su Instagram e YouTube). Al contrario, <strong>Trustpilot segna 2.3/5</strong> con il 65% di feedback negativi, alimentati da problemi di qualità percepita sui prodotti di fugatura e da un servizio clienti giudicato non reattivo. Su Google Maps (9 sedi, 243 recensioni), il tasso di risposta del brand è <strong>0%</strong>, un'assenza che amplifica le critiche negative e segnala una gestione reputazionale ancora insufficiente sulle piattaforme pubbliche.</p>
+    <p>La principale criticità strategica è il <strong>gap tra reputazione B2B e percezione B2C</strong>: eccellente tra applicatori professionisti, ingegneri e progettisti; problematica tra utenti finali e DIYer, in particolare sul mercato anglosassone e nordeuropeo. Consolidare il presidio AI già ottimo, attivare una risposta sistematica alle recensioni pubbliche e sviluppare comunicazione differenziata per il segmento consumer sono le tre priorità operative emerse dall'analisi.</p>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">I numeri in sintesi</div>
+  <div class="kpi-snapshot">
+    <div class="kpi-snap-card">
+      <div class="kpi-snap-val green">4.1<span style="font-size:16px;font-weight:400;color:#aaa">/5</span></div>
+      <div class="kpi-snap-label">Rating Google Maps</div>
+      <div class="kpi-snap-sub">243 recensioni · 9 sedi</div>
+    </div>
+    <div class="kpi-snap-card">
+      <div class="kpi-snap-val blue">87<span style="font-size:16px;font-weight:400;color:#aaa">/100</span></div>
+      <div class="kpi-snap-label">AEO Score Medio</div>
+      <div class="kpi-snap-sub">GPT 85 · Perpl 87 · Gemini 89</div>
+    </div>
+    <div class="kpi-snap-card">
+      <div class="kpi-snap-val orange">91<span style="font-size:16px;font-weight:400;color:#aaa">%</span></div>
+      <div class="kpi-snap-label">Sentiment Social</div>
+      <div class="kpi-snap-sub">47.9K follower totali</div>
+    </div>
+    <div class="kpi-snap-card">
+      <div class="kpi-snap-val red">2.3<span style="font-size:16px;font-weight:400;color:#aaa">/5</span></div>
+      <div class="kpi-snap-label">Rating Trustpilot</div>
+      <div class="kpi-snap-sub">65% recensioni negative</div>
+    </div>
+    <div class="kpi-snap-card">
+      <div class="kpi-snap-val">0<span style="font-size:16px;font-weight:400;color:#aaa">%</span></div>
+      <div class="kpi-snap-label">Tasso Risposta Brand</div>
+      <div class="kpi-snap-sub">Google Maps + Trustpilot</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 1: CONTESTO DI MERCATO -->
+<div id="mercato" class="section-bg">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 1</div>
+    <div class="section-title">Contesto di Mercato</div>
+    <div class="section-subtitle">Dimensione e dinamiche del settore della chimica per l'edilizia · Posizionamento competitivo di Mapei</div>
+  </div>
+
+  <div class="ext-source-note">
+    <div class="ext-source-note-icon">&#9432;</div>
+    <div>
+      <strong>Dati da fonti esterne indipendenti.</strong> I dati di questa sezione sono elaborati da fonti terze certificate (Statista, Federchimica, Polaris Market Research, Gemini.MD). Moca Interactive non è responsabile dell'accuratezza delle proiezioni di mercato. I link alle fonti originali sono riportati sotto ciascuna metrica.
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Metriche Chiave di Mercato</div>
+  <div class="mkt-kpi-grid" style="margin-bottom:8px">
+    <div class="mkt-kpi">
+      <div class="mkt-kpi-val">€4,4 Mld</div>
+      <div class="mkt-kpi-label">Fatturato Mapei 2024</div>
+      <div class="mkt-kpi-trend">+4,7% vs 2023</div>
+      <div class="mkt-kpi-sub"><a href="https://www.statista.com/statistics/971350" target="_blank" class="fonte-link">Statista / Gemini.MD</a></div>
+    </div>
+    <div class="mkt-kpi">
+      <div class="mkt-kpi-val">$44,4 Mld</div>
+      <div class="mkt-kpi-label">Mercato globale 2023</div>
+      <div class="mkt-kpi-trend">Previsione 2031: $66,8 Mld</div>
+      <div class="mkt-kpi-sub"><a href="https://www.statista.com/statistics/1457047" target="_blank" class="fonte-link">Extrapolate / Statista</a></div>
+    </div>
+    <div class="mkt-kpi">
+      <div class="mkt-kpi-val">4,92%</div>
+      <div class="mkt-kpi-label">CAGR mercato Italia 2026-2031</div>
+      <div class="mkt-kpi-trend">Il più rapido in Europa</div>
+      <div class="mkt-kpi-sub"><a href="#" target="_blank" class="fonte-link">Gemini.MD / Analisi di settore</a></div>
+    </div>
+    <div class="mkt-kpi">
+      <div class="mkt-kpi-val">106</div>
+      <div class="mkt-kpi-label">Stabilimenti produttivi globali</div>
+      <div class="mkt-kpi-trend">13.000 dipendenti</div>
+      <div class="mkt-kpi-sub"><a href="#" target="_blank" class="fonte-link">Mapei Group / Gemini.MD</a></div>
+    </div>
+  </div>
+  <p style="font-size:11px;color:#bbb;margin-bottom:32px;margin-top:4px">Tutti i dati di mercato provengono da fonti esterne. Le stime potrebbero differire da rilevazioni successive.</p>
+
+  <div class="metric-section">
+    <div class="metric-row">
+      <div class="metric-left">
+        <div class="metric-big-val green">+129<span class="metric-unit">%</span></div>
+        <div class="metric-label">Crescita fatturato 2013-2023</div>
+        <div class="metric-source">Fonte: <a href="https://www.statista.com/statistics/971350" target="_blank" class="fonte-link">Statista / Federchimica</a></div>
+      </div>
+      <div class="metric-right">
+        <div class="metric-comment">Da €1,82 miliardi a €4,18 miliardi in dieci anni: una crescita che supera strutturalmente il mercato.</div>
+        <div class="metric-body">Il fatturato Mapei è cresciuto ininterrottamente dal 2013, con una sola stagnazione nel 2020 dovuta alla pandemia (-0,1%). La ripresa del 2021 (+17,8%) e la successiva accelerazione confermano la solidità del modello. Nel 2024 il gruppo ha raggiunto €4,4 miliardi, posizionandosi come secondo produttore chimico italiano per vendite globali dopo Versalis (Eni).</div>
+        <div class="benchmark-inline">
+          <strong>Benchmark</strong> <span>Sika AG: €13,1 Mld · Bostik: €2,1 Mld · Laticrete: €0,8 Mld</span>
+        </div>
+        <div class="rog-row">
+          <div class="rog-card rischio">
+            <div class="rog-card-label">Rischio</div>
+            <p>Il gap con Sika (€13,1 Mld) in termini di dimensione e capacità di R&D aumenta la pressione competitiva sui segmenti premium e nelle gare d'appalto internazionali.</p>
+          </div>
+          <div class="rog-card azione">
+            <div class="rog-card-label">Azione</div>
+            <p>Accelerare la strategia di acquisizioni e fusioni aziendali (in inglese M&A, ovvero Mergers & Acquisitions), già attiva con Bitumat, Wecal e Wykamol, per colmare lacune tecnologiche e presidiare mercati ad alta crescita come Medio Oriente e America Latina.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="metric-row">
+      <div class="metric-left">
+        <div class="metric-big-val blue">$83,7<span class="metric-unit">Mld</span></div>
+        <div class="metric-label">Mercato della chimica specialistica per l'edilizia 2024</div>
+        <div class="metric-source">Fonte: <a href="https://www.statista.com/statistics/1478822" target="_blank" class="fonte-link">Polaris Market Research / Statista</a></div>
+      </div>
+      <div class="metric-right">
+        <div class="metric-comment">Il segmento allargato della chimica specialistica per l'edilizia crescerà fino a $126,5 miliardi entro il 2032.</div>
+        <div class="metric-body">Con una quota stimata del segmento adesivi e sigillanti del 21,8% del totale mercato della chimica per l'edilizia, Mapei opera nel cuore del comparto a più alto valore aggiunto. La normalizzazione dei costi energetici e la spinta delle normative EPBD rappresentano due driver strutturali di lungo periodo per la domanda di prodotti chimici ad alte prestazioni.</div>
+        <div class="benchmark-inline">
+          <strong>Quota segmento</strong> <span>Adesivi & sigillanti: 21,8% · Additivi calcestruzzo: 29,6% · Impermeabilizzanti: 9,6%</span>
+        </div>
+        <div class="rog-row">
+          <div class="rog-card rischio">
+            <div class="rog-card-label">Rischio</div>
+            <p>Il sistema EU ETS grava sul comparto chimico italiano per oltre €600 milioni/anno, con previsione di raddoppio entro il 2030: pressione strutturale sui margini.</p>
+          </div>
+          <div class="rog-card azione">
+            <div class="rog-card-label">Azione</div>
+            <p>Accelerare la Linea Zero e comunicare attivamente le EPD (Environmental Product Declarations) per trasformare il vincolo normativo in vantaggio competitivo sul procurement pubblico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Trend di Settore Rilevanti</div>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <div class="insight-tag">Trend #1</div>
+      <h4>Green Building e Normative CAM</h4>
+      <p>Le normative europee EPBD e i Criteri Ambientali Minimi obbligano le imprese a preferire prodotti con certificazioni ambientali verificabili (EPD, LCA). Kerakoll ha già costruito su questo terreno una narrativa di forte differenziazione.</p>
+      <div class="insight-fonte">Fonte: <a href="#" target="_blank">Gemini.MD / Analisi di settore 2026</a></div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-tag">Trend #2</div>
+      <h4>Digitalizzazione del Cantiere</h4>
+      <p>Piattaforme come Mapei PRO (in collaborazione con ACCA Software) integrano il brand nel flusso di lavoro digitale dei progettisti dalla fase di capitolato, creando barriere all'ingresso difficili da replicare per competitor.</p>
+      <div class="insight-fonte">Fonte: <a href="#" target="_blank">Gemini.MD / Mapei.com</a></div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-tag">Trend #3</div>
+      <h4>Espansione Mercati Emergenti</h4>
+      <p>Il Medio Oriente ha segnato +130,3% per Mapei, trainato dai mega-progetti Saudi Vision 2030. L'America Latina cresce del 28,3%. La strategia locale-con-produzione-in-loco resta un vantaggio competitivo difficile da replicare.</p>
+      <div class="insight-fonte">Fonte: <a href="#" target="_blank">Gemini.MD / Rapporto Mapei Group 2024</a></div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Competitor,Benchmark Dimensionale</div>
+  <div class="comp-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Competitor</th>
+          <th>Fatturato stimato</th>
+          <th>Dipendenti</th>
+          <th>Stabilimenti</th>
+          <th>Quota di mercato (in proporzione a Sika)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank-dot">1</span></td>
+          <td>Sika AG</td>
+          <td>~€13,1 Mld</td>
+          <td>33.000</td>
+          <td>300+</td>
+          <td><div class="visit-bar-inline"><div class="visit-bar-fill-gray" style="width:100%"></div></div></td>
+        </tr>
+        <tr class="highlight-row">
+          <td><span class="rank-dot active">2</span></td>
+          <td><strong style="color:var(--red)">Mapei Group ←</strong></td>
+          <td><strong>€4,4 Mld</strong></td>
+          <td>13.000</td>
+          <td>106</td>
+          <td><div class="visit-bar-inline"><div class="visit-bar-fill" style="width:34%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="rank-dot">3</span></td>
+          <td>Bostik (Arkema)</td>
+          <td>~€2,1 Mld</td>
+          <td>6.000</td>
+          <td>54</td>
+          <td><div class="visit-bar-inline"><div class="visit-bar-fill-gray" style="width:16%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="rank-dot">4</span></td>
+          <td>Laticrete</td>
+          <td>~€0,8 Mld</td>
+          <td>2.000</td>
+          <td>25</td>
+          <td><div class="visit-bar-inline"><div class="visit-bar-fill-gray" style="width:6%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="rank-dot">5</span></td>
+          <td>Kerakoll (IT)</td>
+          <td>N.D.</td>
+          <td>~1.500</td>
+          <td>N.D.</td>
+          <td><div class="visit-bar-inline"><div class="visit-bar-fill-gray" style="width:4%"></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#aaa">Fonte: <a href="#" target="_blank" class="fonte-link">Gemini.MD / Rapporti aziendali 2024</a> &nbsp;·&nbsp; Dati provenienti da fonte esterna, soggetti a variazione.</p>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 2: POSIZIONAMENTO -->
+<div id="posizionamento">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 2</div>
+    <div class="section-title">Posizionamento</div>
+    <div class="section-subtitle">Punti di forza e di debolezza emersi dalle analisi incrociate delle fonti.</div>
+  </div>
+
+  <div class="sentiment-map" style="margin-bottom:40px">
+    <div class="sentiment-map-title">Mappa del Sentiment per Fonte</div>
+    <div class="sm-row">
+      <div class="sm-source">Google Maps (9 sedi)</div>
+      <div class="sm-bars">
+        <div class="sm-bar-pos" style="width:76%">76%</div>
+        <div class="sm-bar-neu" style="width:7%"></div>
+        <div class="sm-bar-neg" style="width:17%">17%</div>
+      </div>
+    </div>
+    <div class="sm-row">
+      <div class="sm-source">Social Media</div>
+      <div class="sm-bars">
+        <div class="sm-bar-pos" style="width:91%">91%</div>
+        <div class="sm-bar-neu" style="width:7%"></div>
+        <div class="sm-bar-neg" style="width:2%"></div>
+      </div>
+    </div>
+    <div class="sm-row">
+      <div class="sm-source">Reddit</div>
+      <div class="sm-bars">
+        <div class="sm-bar-pos" style="width:38%">38%</div>
+        <div class="sm-bar-neu" style="width:28%"></div>
+        <div class="sm-bar-neg" style="width:34%">34%</div>
+      </div>
+    </div>
+    <div class="sm-row">
+      <div class="sm-source">Trustpilot</div>
+      <div class="sm-bars">
+        <div class="sm-bar-pos" style="width:35%">35%</div>
+        <div class="sm-bar-neu" style="width:0%"></div>
+        <div class="sm-bar-neg" style="width:65%">65%</div>
+      </div>
+    </div>
+    <div class="sm-legend">
+      <div class="sm-leg-item"><div class="sm-leg-dot" style="background:var(--green)"></div> Positivo</div>
+      <div class="sm-leg-item"><div class="sm-leg-dot" style="background:#FFC34A"></div> Neutro</div>
+      <div class="sm-leg-item"><div class="sm-leg-dot" style="background:var(--red)"></div> Negativo</div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:14px">Punti di Forza</div>
+  <div class="positioning-grid" style="margin-bottom:32px">
+    <div class="pos-card forza">
+      <div class="pos-num">01</div>
+      <div class="pos-title">Leadership AI riconosciuta (AEO 87/100)</div>
+      <div class="pos-body">Mapei è identificata come leader di mercato da tutti e tre i principali AI engine. Score medio 87/100, con Gemini al massimo di 89. Il brand viene associato a eccellenza tecnica, 80+ anni di storia e presenza globale in 100+ paesi.</div>
+    </div>
+    <div class="pos-card forza">
+      <div class="pos-num">02</div>
+      <div class="pos-title">Reputazione tecnica B2B consolidata</div>
+      <div class="pos-body">Forum specializzati, architetti e posatori professionisti citano Mapei come standard di riferimento per adesivi, impermeabilizzanti e restauro. Il confronto con Kerakoll è percepito come una scelta tra pari, non come un'alternativa inferiore.</div>
+    </div>
+    <div class="pos-card forza">
+      <div class="pos-num">03</div>
+      <div class="pos-title">Mapei Academy eccellente</div>
+      <div class="pos-body">I corsi di formazione ottengono 4.8/5 su Trustpilot, con formatori citati per nome nelle recensioni. L'Academy è percepita come un punto di differenziazione reale rispetto ai competitor, non solo un'attività di marketing.</div>
+    </div>
+    <div class="pos-card forza">
+      <div class="pos-num">04</div>
+      <div class="pos-title">Gamma prodotti integrata (25+ linee)</div>
+      <div class="pos-body">La copertura dell'intero ciclo edilizio, dalla posa ceramica al restauro monumentale, è un vantaggio competitivo riconosciuto da tutti gli AI engine e dai professionisti nei forum. Prodotti storici come Keraflex e Mapelastic sono sinonimi di categoria.</div>
+    </div>
+    <div class="pos-card forza">
+      <div class="pos-num">05</div>
+      <div class="pos-title">Heritage sportivo e brand awareness estesa</div>
+      <div class="pos-body">La sponsorizzazione nel ciclismo (Colnago Mapei) e nel motorsport genera brand awareness trasversale anche fuori dal settore edile, con post su Reddit e social che raggiungono centinaia di upvote da community non professionali.</div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:14px">Punti di Debolezza</div>
+  <div class="positioning-grid">
+    <div class="pos-card debol">
+      <div class="pos-num">01</div>
+      <div class="pos-title">Trustpilot critico (2.3/5, 65% negativo)</div>
+      <div class="pos-body">Il campione analizzato su Trustpilot è dominato da recensioni negative (13/20 a 1 stella). I cluster principali riguardano qualità grout (45% dei temi), servizio clienti (23%) e garanzie non onorate. Impatto diretto sulla decisione d'acquisto del mercato consumer internazionale.</div>
+    </div>
+    <div class="pos-card debol">
+      <div class="pos-num">02</div>
+      <div class="pos-title">Tasso risposta brand: 0%</div>
+      <div class="pos-body">Nessuna risposta del brand su 243 recensioni Google Maps e 20 recensioni Trustpilot. L'assenza totale di engagement segnala una gestione reputazionale ancora insufficiente e amplifica l'impatto negativo delle critiche sugli utenti che le leggono.</div>
+    </div>
+    <div class="pos-card debol">
+      <div class="pos-num">03</div>
+      <div class="pos-title">Limiti per il fai-da-te: prodotti difficili per gli utenti finali</div>
+      <div class="pos-body">Su Reddit, la fuga Ultracolor FA è il prodotto più discusso per le sue criticità: tempo di lavorabilità breve (circa 30 minuti), rapporto acqua/polvere critico, colori finali spesso diversi dall'atteso. Chi si avvicina al fai-da-te per la prima volta si trova a gestire un prodotto professionale senza istruzioni adeguate.</div>
+    </div>
+    <div class="pos-card debol">
+      <div class="pos-num">04</div>
+      <div class="pos-title">Narrativa sostenibilità in ritardo vs Kerakoll</div>
+      <div class="pos-body">La Linea Zero esiste e include prodotti con EPD certificate, ma non viene comunicata con l'efficacia emotiva con cui Kerakoll ha costruito il proprio posizionamento "GreenBuilding". Il gap narrativo si traduce in una percezione di ritardo ambientale non giustificata dai fatti.</div>
+    </div>
+    <div class="pos-card debol">
+      <div class="pos-num">05</div>
+      <div class="pos-title">Packaging confuso e indifferenziato</div>
+      <div class="pos-body">Diversi utenti su Trustpilot e Reddit segnalano difficoltà nel distinguere i prodotti tra loro e casi in cui il personale di negozio ha consegnato il prodotto sbagliato. Il sistema di packaging attuale non è adeguato per il mercato GDO e DIY.</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 3: FEEDBACK DEI CLIENTI -->
+<div id="feedback" class="section-bg preview-section preview-section-bg">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 3</div>
+    <div class="section-title">Feedback dei Clienti</div>
+    <div class="section-subtitle">Analisi per fonte delle recensioni e del sentiment · Clicca i temi per esplorare i commenti</div>
+  </div>
+
+  <div class="metric-section" style="margin-bottom:40px">
+    <div class="metric-row">
+      <div class="metric-left">
+        <div class="metric-big-val green">4.1<span class="metric-unit">/5</span></div>
+        <div class="metric-label">Rating Google Maps</div>
+        <div class="metric-source">Fonte: Google Maps · 9 sedi</div>
+      </div>
+      <div class="metric-right">
+        <div class="metric-comment">Il rating Google Maps è solido, ma nasconde una netta polarizzazione: molti 5 stelle da visitatori delle sedi produttive e professionisti, e una coda di 1 stella da clienti con esperienze negative.</div>
+        <div class="metric-body">Su 243 recensioni totali, 152 sono a 5 stelle (63%) e 37 a 1 stella (15%). Le recensioni con testo (115) rivelano due cluster distinti: apprezzamento per qualità aziendale e personale nelle sedi italiane; critiche per tempi di attesa nel carico/scarico e mancanza di assistenza tecnica. Il tasso di risposta del brand è <strong>0%</strong>.</div>
+        <div class="note-inline">
+          <div class="note-inline-label">Nota Metodologica</div>
+          Il dataset include 9 sedi Mapei (stabilimenti, showroom, centri tecnici). Il rating aggregato è 4.1/5 con 243 recensioni totali, di cui 115 con testo. Le sedi variano da 3.5 a 4.8 di media. I dati sono stati raccolti su Google Maps nel maggio 2026.
+        </div>
+        <div class="rog-row">
+          <div class="rog-card rischio">
+            <div class="rog-card-label">Rischio</div>
+            <p>L'assenza di risposte alle recensioni negative le lascia visibili e non contestate, influenzando i potenziali clienti che effettuano ricerche prima dell'acquisto.</p>
+          </div>
+          <div class="rog-card azione">
+            <div class="rog-card-label">Azione</div>
+            <p>Attivare un programma di risposta sistematica alle recensioni, con target 80% tasso di risposta entro 6 mesi, in particolare per le recensioni negative a 1-2 stelle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="metric-row">
+      <div class="metric-left">
+        <div class="metric-big-val red">65<span class="metric-unit">%</span></div>
+        <div class="metric-label">Sentiment negativo (Trustpilot)</div>
+        <div class="metric-source">Fonte: Trustpilot · Campione int'le</div>
+      </div>
+      <div class="metric-right">
+        <div class="metric-comment">Trustpilot è la fonte più critica: il 65% delle recensioni è negativo (1 stella), con temi dominanti su qualità prodotti e customer service.</div>
+        <div class="metric-body">Il campione analizzato (20 recensioni recenti) mostra una polarizzazione netta: 5 stelle per esperienze di formazione e servizio rapido, 1 stella per tutto il resto. Le criticità ricorrenti riguardano fuganti che cambiano colore, prodotti che non asciugano, servizio clienti giudicato arrogante e garanzie non rispettate. Le recensioni provengono da UK, US, IT, AT, NL, con focus su mercato consumer e DIY.
+        </div>
+        <div class="benchmark-inline">
+          <strong>Benchmark di settore</strong> <span>Aziende chimiche B2C: media 3.2-3.8/5 su Trustpilot</span>
+        </div>
+        <div class="note-inline">
+          <div class="note-inline-label">Nota Metodologica</div>
+          L'analisi si basa su un campione delle 20 recensioni più recenti disponibili su Trustpilot per Mapei (data raccolta: maggio 2026). Il rating medio del campione è 2.3/5. Nessuna recensione è verificata come acquisto confermato.
+        </div>
+        <div class="rog-row">
+          <div class="rog-card rischio">
+            <div class="rog-card-label">Rischio</div>
+            <p>Un rating 2.3/5 su Trustpilot con 0% risposte del brand è visibile nelle SERP e può influenzare negativamente le decisioni di acquisto, specialmente sui mercati UK e US dove la piattaforma ha alta credibilità.</p>
+          </div>
+          <div class="rog-card azione">
+            <div class="rog-card-label">Azione</div>
+            <p>Implementare un processo strutturato di raccolta di recensioni positive post-acquisto (Academy, distributori certificati) per bilanciare la distribuzione e rispondere attivamente a tutte le recensioni negative entro 48h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:14px">Analisi per Fonte</div>
+  <div class="fonte-tab-nav">
+    <button class="ftab-btn active" onclick="showFtab('fonte1',this)">Google Maps</button>
+    <button class="ftab-btn" onclick="showFtab('fonte2',this)">Trustpilot</button>
+    <button class="ftab-btn" onclick="showFtab('fonte3',this)">Reddit</button>
+    <button class="ftab-btn" onclick="showFtab('fonte4',this)">Social Media</button>
+  </div>
+
+  <!-- FONTE 1: GOOGLE MAPS -->
+  <div id="ftab-fonte1" class="ftab-content active">
+    <div class="fonte-card">
+      <div class="fonte-header" style="border-left-color:var(--green)">
+        <div>
+          <div class="fonte-name">Google Maps</div>
+          <div class="fonte-tipo">Piattaforma di recensioni locali · 9 sedi analizzate</div>
+        </div>
+        <span class="badge badge-green">Prevalentemente positivo</span>
+      </div>
+      <div class="fonte-body">
+        <div class="fonte-kpi-row">
+          <div class="fkpi"><div class="fkpi-val">243</div><div class="fkpi-label">Recensioni totali</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--green)">4.1/5</div><div class="fkpi-label">Rating medio</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--green)">76%</div><div class="fkpi-label">Sentiment positivo</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--red)">0%</div><div class="fkpi-label">Tasso risposta brand</div></div>
+          <div class="fkpi"><div class="fkpi-val">9</div><div class="fkpi-label">Sedi analizzate</div></div>
+        </div>
+
+        <div class="temi-container">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:6px">Temi Principali</div>
+          <div class="temi-help">Clicca su un tema per vedere commenti esemplificativi</div>
+          <div class="temi-list">
+            <button class="tema-tag-btn active" onclick="toggleTema(this,'f1-tema-1')">Qualità aziendale <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f1-tema-2')">Personale qualificato <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f1-tema-3')">Tempi attesa carico/scarico <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f1-tema-4')">Servizio post-vendita <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f1-tema-5')">Assistenza tecnica <span class="arrow">▼</span></button>
+          </div>
+
+          <div id="f1-tema-1" class="tema-panel visible">
+            <div class="tema-panel-label">Commenti esemplificativi,Qualità aziendale</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Azienda top in Italia per i prodotti per edilizia. Personale professionale e disponibile."<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+              <div class="tema-comment">"Una delle maggiori realtà italiane nell'ambito della ricerca sui prodotti per edilizia."<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+              <div class="tema-comment">"Azienda storica italiana per materiali per l'edilizia. Una certezza!"<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+            </div>
+          </div>
+          <div id="f1-tema-2" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Personale qualificato</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Azienda con personale altamente qualificato."<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+              <div class="tema-comment">"Società ben organizzata con laboratori di ricerca all'avanguardia. Grande disponibilità dei consulenti tecnici e commerciali."<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+              <div class="tema-comment">"Azienda seria e leader del settore, principalmente per la comunicazione e informazione tecnica."<div class="tema-comment-meta">Google Maps · 4 stelle</div></div>
+            </div>
+          </div>
+          <div id="f1-tema-3" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Tempi attesa carico/scarico</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Pessima esperienza lavorativa! Ho aspettato quasi 7 ore per caricare. Organizzazione inefficace."<div class="tema-comment-meta">Google Maps · 1 stella</div></div>
+              <div class="tema-comment">"Attese lunghe e la roba quasi sempre è da preparare, sono organizzati male e dubito che a qualcuno interessi migliorare."<div class="tema-comment-meta">Google Maps · 4 stelle</div></div>
+              <div class="tema-comment">"Ore e ore di scarico e carico avendo anche una fascia oraria. Solo 3 parcheggi esterni."<div class="tema-comment-meta">Google Maps · 1 stella</div></div>
+            </div>
+          </div>
+          <div id="f1-tema-4" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Servizio post-vendita</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Servizio post vendita impeccabile, gli altri competitor non ti ascoltano nemmeno se hai un problema."<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+              <div class="tema-comment">"Bravi nel consigliare e perfetti nel risultato."<div class="tema-comment-meta">Google Maps · 4 stelle</div></div>
+            </div>
+          </div>
+          <div id="f1-tema-5" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Assistenza tecnica</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Che azienda pessima. Sembra che il concetto di servizio clienti non esista proprio da Mapei."<div class="tema-comment-meta">Google Maps · 1 stella</div></div>
+              <div class="tema-comment">"L'esperienza personale, quale cliente finale, è stata molto negativa. Lamento in particolare una mancata e adeguata assistenza tecnica per alcune problematiche emerse in fase di posa."<div class="tema-comment-meta">Google Maps · 1 stella</div></div>
+              <div class="tema-comment">"Ottimo centro Mapei per servizi e consulenze specifiche."<div class="tema-comment-meta">Google Maps · 5 stelle</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fd-two-col">
+          <div>
+            <div class="fd-col-label green">Punti di Forza</div>
+            <div class="fd-list">
+              <div class="fd-item pos">
+                <div class="fd-item-title">Reputazione aziendale consolidata</div>
+                <div class="fd-item-body">Mapei è riconosciuta come leader del settore edile italiano. Le sedi produttive ricevono visitatori che definiscono l'azienda "una realtà storica" e "punto di riferimento".</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Bellissima realtà italiana nel mondo."<div class="fd-quote-meta">Google Maps · 5 stelle</div></div>
+                  <div class="fd-quote">"Una delle maggiori realtà italiane nell'ambito della ricerca sui prodotti per edilizia."<div class="fd-quote-meta">Google Maps · 5 stelle</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Personale tecnico competente e cortese</div>
+                <div class="fd-item-body">Le recensioni positive lodano la competenza e la disponibilità del personale nelle sedi italiane, in particolare nei centri tecnici e commerciali.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Personale gentilissimo e competente! Consiglio assolutamente."<div class="fd-quote-meta">Google Maps · 5 stelle</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Strutture di ricerca all'avanguardia</div>
+                <div class="fd-item-body">I laboratori e i centri di ricerca Mapei sono citati come elemento di eccellenza, con una percezione di investimento continuo nell'innovazione.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Società ben organizzata con laboratori di ricerca all'avanguardia."<div class="fd-quote-meta">Google Maps · 5 stelle</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Servizio post-vendita percepito positivamente</div>
+                <div class="fd-item-body">Alcune sedi si distinguono per il supporto post-vendita, con un confronto esplicito favorevole rispetto ai competitor diretti.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Servizio post vendita impeccabile, gli altri competitor non ti ascoltano nemmeno se hai un problema."<div class="fd-quote-meta">Google Maps · 5 stelle</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Riconoscimento internazionale</div>
+                <div class="fd-item-body">Le recensioni in lingua straniera (francese, tedesco, bulgaro, russo) confermano una reputazione positiva che supera i confini nazionali, anche per sedi fuori Italia.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Le personnel est très agréable. Le temps du changement est très correct."<div class="fd-quote-meta">Google Maps · 5 stelle · Sede estera</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="fd-col-label red">Punti di Criticità</div>
+            <div class="fd-list">
+              <div class="fd-item neg">
+                <div class="fd-item-title">Tempi di attesa carico/scarico inaccettabili</div>
+                <div class="fd-item-body">Il tema più ricorrente nelle 1 stella: autotrasportatori e clienti che aspettano ore (fino a 7+) per operazioni logistiche. Il problema riguarda principalmente gli stabilimenti produttivi.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Ho aspettato quasi 7 ore per caricare. Organizzazione pessima."<div class="fd-quote-meta">Google Maps · 1 stella</div></div>
+                  <div class="fd-quote">"Arrivando anche con ore di anticipo con l'arroganza e scostumatezza del responsabile sulla ribalta."<div class="fd-quote-meta">Google Maps · 1 stella</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Nessuna risposta del brand (0% tasso)</div>
+                <div class="fd-item-body">Zero risposte a 243 recensioni, incluse tutte le 1 stelle. L'assenza amplifica il peso delle critiche agli occhi dei lettori.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Il concetto di servizio clienti non esiste da Mapei."<div class="fd-quote-meta">Google Maps · 1 stella · Senza risposta</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Assistenza tecnica insufficiente per clienti finali</div>
+                <div class="fd-item-body">I clienti finali (non professionisti) lamentano una mancanza di supporto tecnico adeguato per problematiche emerse in fase di posa, con rimandi tra divisioni senza soluzione.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Lamento una mancata e adeguata assistenza tecnica per problematiche emerse in fase di posa."<div class="fd-quote-meta">Google Maps · 1 stella</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Showroom non accessibili al pubblico</div>
+                <div class="fd-item-body">Diversi utenti segnalano indirizzi errati o showroom non aperti al pubblico: la sede legale di Milano viene visualizzata su Maps come punto visitabile, ma non lo è.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"In via Cafiero a Milano non esiste nessuno showroom, ma la sede legale! Due ore buttate al vento."<div class="fd-quote-meta">Google Maps · 1 stella</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Problemi di prodotto segnalati (grout/fuganti)</div>
+                <div class="fd-item-body">Alcune recensioni con testo segnalano problemi di qualità su fuganti (grumi, colori non corrispondenti), anche su sedi che rivendono prodotti.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Sacchi probabilmente rimasti esposti all'acqua, pieni di grumi duri come sassi."<div class="fd-quote-meta">Google Maps · 1 stella · Rivenditore</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:8px">Keyword Ricorrenti</div>
+        <div class="kw-list" style="margin-bottom:20px">
+          <span class="kw-tag">azienda leader</span>
+          <span class="kw-tag">personale qualificato</span>
+          <span class="kw-tag">attesa</span>
+          <span class="kw-tag">prodotti edilizia</span>
+          <span class="kw-tag">laboratori ricerca</span>
+          <span class="kw-tag">caricare</span>
+          <span class="kw-tag">assistenza tecnica</span>
+          <span class="kw-tag">professionisti</span>
+        </div>
+
+        <div class="note-box">
+          <h4>Note Analitiche</h4>
+          <p>Le recensioni 5 stelle provengono prevalentemente da visitatori delle sedi produttive italiane e da professionisti del settore. Le 1 stelle sono invece concentrate su esperienze logistiche (carico/scarico) e su clienti finali con problemi di prodotto non risolti. Il <strong>gap tra sedi</strong> è significativo: alcune filiali ottengono 4.8/5, altre scendono sotto il 3.5. Un programma di risposta sistematica e l'ottimizzazione dei profili Google Business (orari, foto, descrizione) potrebbero migliorare il rating complessivo in 3-6 mesi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FONTE 2: TRUSTPILOT -->
+  <div id="ftab-fonte2" class="ftab-content">
+    <div class="fonte-card">
+      <div class="fonte-header" style="border-left-color:var(--red)">
+        <div>
+          <div class="fonte-name">Trustpilot</div>
+          <div class="fonte-tipo">Piattaforma di recensioni consumer internazionale</div>
+        </div>
+        <span class="badge badge-red">Prevalentemente negativo</span>
+      </div>
+      <div class="fonte-body">
+        <div class="fonte-kpi-row">
+          <div class="fkpi"><div class="fkpi-val">20</div><div class="fkpi-label">Recensioni campione</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--red)">2.3/5</div><div class="fkpi-label">Rating medio</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--green)">35%</div><div class="fkpi-label">Sentiment positivo</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--red)">65%</div><div class="fkpi-label">Sentiment negativo</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--red)">0%</div><div class="fkpi-label">Tasso risposta brand</div></div>
+        </div>
+
+        <div class="temi-container">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:6px">Temi Principali</div>
+          <div class="temi-help">Clicca su un tema per vedere commenti esemplificativi</div>
+          <div class="temi-list">
+            <button class="tema-tag-btn active" onclick="toggleTema(this,'f2-tema-1')">Qualità grout/fuganti <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f2-tema-2')">Servizio clienti <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f2-tema-3')">Mapei Academy <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f2-tema-4')">Garanzie e affidabilità <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f2-tema-5')">Packaging e marketing <span class="arrow">▼</span></button>
+          </div>
+
+          <div id="f2-tema-1" class="tema-panel visible">
+            <div class="tema-panel-label">Commenti esemplificativi,Qualità grout/fuganti</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Seven weeks after installation I can scratch the grout with my finger nail and it turns to powder."<div class="tema-comment-meta">Trustpilot · 1 stella · Jan 2026 · US</div></div>
+              <div class="tema-comment">"Purchased Mapei grout color Bone 5015. Applied grout and it dried an almost completely white color, nothing like the card sample."<div class="tema-comment-meta">Trustpilot · 1 stella · Dec 2025 · US</div></div>
+              <div class="tema-comment">"KEEP AWAY FROM MAPEI GROUTS. They change colour when you clean floors with warm water and leave dark patches."<div class="tema-comment-meta">Trustpilot · 1 stella · Mar 2026 · GB</div></div>
+            </div>
+          </div>
+          <div id="f2-tema-2" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Servizio clienti</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"When speaking to Mapei customer service they speak to you like you know nothing. I've been a tiler for 20 years. They put the phone down too, which is very unprofessional."<div class="tema-comment-meta">Trustpilot · 1 stella · Mar 2026 · GB</div></div>
+              <div class="tema-comment">"Refuse to answer/address questions put to them, deflecting continually and indeed contradicting themselves."<div class="tema-comment-meta">Trustpilot · 1 stella · Sep 2025 · GB</div></div>
+              <div class="tema-comment">"Mapei does a terrible job of marketing their products. I am simply trying to find a place to purchase Mapecoat Deck T but the places listed don't sell it."<div class="tema-comment-meta">Trustpilot · 1 stella · Mar 2025 · US</div></div>
+            </div>
+          </div>
+          <div id="f2-tema-3" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Mapei Academy</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"I just attended the waterproof course and I've gotta say it's a game changer. The reps were spot on, instructor knows their stuff. Overall a 10/10 experience."<div class="tema-comment-meta">Trustpilot · 5 stelle · Feb 2026 · GB</div></div>
+              <div class="tema-comment">"Excellent Mapei Academy. Tutor Adrian Jones is very professional, patient, friendly and full of knowledge. Both Emma Yardley and Adrian Jones are credit to MAPEI."<div class="tema-comment-meta">Trustpilot · 5 stelle · Dec 2024 · GB</div></div>
+              <div class="tema-comment">"Trainer Adam Newton-Smith, the information he has is next level, brilliant guy and brilliant presenter."<div class="tema-comment-meta">Trustpilot · 5 stelle · Apr 2025 · GB</div></div>
+            </div>
+          </div>
+          <div id="f2-tema-4" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Garanzie e affidabilità</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"We had two new roofs certified by Mapei, both leaked within two years. How do Mapei vet their installers or do they just certify anyone?"<div class="tema-comment-meta">Trustpilot · 1 stella · Feb 2025 · GB</div></div>
+              <div class="tema-comment">"Ho acquistato una pittura per esterno, dopo neanche 2 mesi il colore si è letteralmente bruciato. Non hanno assolutamente riconosciuto la garanzia."<div class="tema-comment-meta">Trustpilot · 1 stella · Oct 2024 · IT</div></div>
+            </div>
+          </div>
+          <div id="f2-tema-5" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Packaging e marketing</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Everything looks the same. Doesn't matter what kind of adhesive it is, it's nearly impossible to tell. Even shop staff hand out the wrong product."<div class="tema-comment-meta">Trustpilot · 4 stelle · Jul 2025 · GB</div></div>
+              <div class="tema-comment">"Bin seit Jahren ein Fan von Mapei Produkten. Trotz 30% Einkaufsrabatt stolze 190€ inkl. MwSt. für 4 Sack. Wenn man nicht Feind seines Geldes ist, sollte man Alternativen suchen."<div class="tema-comment-meta">Trustpilot · 1 stella · Oct 2025 · AT</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fd-two-col">
+          <div>
+            <div class="fd-col-label green">Punti di Forza</div>
+            <div class="fd-list">
+              <div class="fd-item pos">
+                <div class="fd-item-title">Mapei Academy,Formazione di eccellenza</div>
+                <div class="fd-item-body">I corsi di formazione ricevono valutazioni sistematicamente 5/5, con formatori citati per nome. Rappresentano il punto di forza reputazionale più solido su Trustpilot.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"A 10/10 experience with good food, good laughs and a good day."<div class="fd-quote-meta">Trustpilot · 5 stelle · Feb 2026 · GB</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Servizio campioni rapido ed efficace</div>
+                <div class="fd-item-body">Almeno due recensioni positive citano l'invio rapido di campioni di grout per abbinamento colore, con consegna il giorno successivo.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Sent me the samples of grout to match the kitchen grout. Arrived the next day. Great and fast service."<div class="fd-quote-meta">Trustpilot · 5 stelle · Mar 2025 · GB</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Alcuni prodotti con performance eccellenti</div>
+                <div class="fd-item-body">Prodotti come Flexcolor e Keraflex Maxi S1 vengono apprezzati anche da utenti critici, evidenziando come la qualità percepita sia variabile per prodotto.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"The Flexcolor was fantastic! I am a novice grouter and it went on easily, easy cleanup and looks great!"<div class="fd-quote-meta">Trustpilot · 4 stelle · Jan 2025 · US</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Consulenti tecnici disponibili sul territorio</div>
+                <div class="fd-item-body">Alcune recensioni positive, specialmente italiane, citano la disponibilità e la professionalità degli incaricati territoriali Mapei.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Un incaricato Mapei Umbria, Renato Cucchiarini, è stato molto gentile. Si è reso disponibile per fare sopralluogo e consigliarmi."<div class="fd-quote-meta">Trustpilot · 5 stelle · Oct 2024 · IT</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Documentazione tecnica approfondita</div>
+                <div class="fd-item-body">Utenti avanzati apprezzano la profondità delle schede tecniche e dei materiali formativi, anche quando criticano altri aspetti del prodotto.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"After researching online and reading the material for Mapei's Kerapoxy I decided to use it."<div class="fd-quote-meta">Trustpilot · 1 stella · Jun 2025 · US (cita uso documentazione)</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="fd-col-label red">Punti di Criticità</div>
+            <div class="fd-list">
+              <div class="fd-item neg">
+                <div class="fd-item-title">Cambio colore e discrepanza cromatica grout</div>
+                <div class="fd-item-body">Il problema più frequente e grave: il colore del grout non corrisponde al campionario, cambia dopo la pulizia o scurisce irregolarmente. Impatta più prodotti (Ultracolor, Kerapoxy, Ultracolor Plus).</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"They change colour when you clean floors with warm water and leave dark patches."<div class="fd-quote-meta">Trustpilot · 1 stella · Mar 2026 · GB</div></div>
+                  <div class="fd-quote">"It dried an almost completely white color, nothing like the card sample. Now I have to completely regrout."<div class="fd-quote-meta">Trustpilot · 1 stella · Dec 2025 · US</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Customer service arrogante e non risolutivo</div>
+                <div class="fd-item-body">Il customer service è descritto come difensivo, che tratta il cliente come incompetente, che chiude il telefono, che deflette la responsabilità. Criticità trasversale a UK, US, NL.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"They speak to you like you know nothing. I've been a tiler for 20 years."<div class="fd-quote-meta">Trustpilot · 1 stella · Mar 2026 · GB</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Prodotti che non aderiscono/non asciugano</div>
+                <div class="fd-item-body">Diversi utenti segnalano prodotti (adesivi e grout) che non raggiungono le prestazioni attese: non si indurisce, non asciuga, si sbriciola a pochi mesi dall'applicazione.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Terrible stuff. It won't cure. I've had to remove and clean my tiles and spent a whole wasted day."<div class="fd-quote-meta">Trustpilot · 1 stella · Jan 2026 · GB</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Garanzie non rispettate</div>
+                <div class="fd-item-body">Il sistema di garanzia viene percepito come opaco e non vincolante. I clienti segnalano che le garanzie certificate da Mapei non vengono onorate in caso di difetti.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Anyone can paint on this product and request Mapei to pass a certified warranty. We had two new roofs certified, both leaked within two years."<div class="fd-quote-meta">Trustpilot · 1 stella · Feb 2025 · GB</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Packaging indifferenziato e confuso</div>
+                <div class="fd-item-body">Il sistema di packaging è criticato per essere troppo simile tra prodotti diversi, generando errori di acquisto e di applicazione anche tra professionisti e personale di negozio.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Do you seriously lack the imagination to make different packaging? Even shop staff hand out the wrong product."<div class="fd-quote-meta">Trustpilot · 4 stelle · Jul 2025 · GB</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Prezzi non competitivi vs mercato</div>
+                <div class="fd-item-body">Un utente austriaco segnala prezzi molto superiori alla media di mercato anche con sconto clienti, portando al confronto diretto con prodotti di pari qualità a prezzi inferiori.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Wenn man nicht Feind seines hart verdienten Geldes ist, sollte man sich Alternativen suchen."<div class="fd-quote-meta">Trustpilot · 1 stella · Oct 2025 · AT</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:8px">Keyword Ricorrenti</div>
+        <div class="kw-list" style="margin-bottom:20px">
+          <span class="kw-tag">grout colour change</span>
+          <span class="kw-tag">customer service</span>
+          <span class="kw-tag">warranty</span>
+          <span class="kw-tag">Mapei Academy</span>
+          <span class="kw-tag">packaging</span>
+          <span class="kw-tag">curing</span>
+          <span class="kw-tag">instructor</span>
+          <span class="kw-tag">price</span>
+        </div>
+
+        <div class="fonte-risk-alert">
+          <div class="fonte-risk-label">Alert Reputazionale</div>
+          <p>Tre recensioni recenti (2025-2026) utilizzano termini come "rubbish", "scum bags", "vergogna assoluta". La presenza di linguaggio fortemente negativo senza risposta del brand aumenta il rischio di amplificazione su altri canali (screenshot, condivisione social).</p>
+        </div>
+
+        <div class="note-box">
+          <h4>Note Analitiche</h4>
+          <p>Il campione Trustpilot è costituito dalle <strong>20 recensioni più recenti</strong>. La distribuzione fortemente polarizzata (5★ o 1★, nessuna 2★ o 3★) mostra come chi ha un'esperienza positiva la valuti al massimo, mentre chi ha avuto un'esperienza negativa esprima il massimo dissenso. La Mapei Academy funziona come presidio reputazionale positivo sul mercato UK, ma non bilancia il volume delle critiche sui prodotti di posa. Il 100% delle recensioni negative menziona prodotti specifici (fuganti, adesivi): un'analisi approfondita per singolo codice prodotto potrebbe identificare quelli con più alta incidenza di difetti.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FONTE 3: REDDIT -->
+  <div id="ftab-fonte3" class="ftab-content">
+    <div class="fonte-card">
+      <div class="fonte-header" style="border-left-color:var(--orange)">
+        <div>
+          <div class="fonte-name">Reddit</div>
+          <div class="fonte-tipo">Community online · r/Tile · r/DIY · r/HomeImprovement</div>
+        </div>
+        <span class="badge badge-orange">Misto · 34% problematico</span>
+      </div>
+      <div class="fonte-body">
+        <div class="fonte-kpi-row">
+          <div class="fkpi"><div class="fkpi-val">80+</div><div class="fkpi-label">Post analizzati</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--green)">38%</div><div class="fkpi-label">Sentiment positivo</div></div>
+          <div class="fkpi"><div class="fkpi-val">28%</div><div class="fkpi-label">Sentiment neutro</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--red)">34%</div><div class="fkpi-label">Problematico</div></div>
+          <div class="fkpi"><div class="fkpi-val">~95%</div><div class="fkpi-label">Contesti DIY/pro</div></div>
+        </div>
+
+        <div class="temi-container">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:6px">Temi Principali</div>
+          <div class="temi-help">Clicca su un tema per vedere commenti esemplificativi</div>
+          <div class="temi-list">
+            <button class="tema-tag-btn active" onclick="toggleTema(this,'f3-tema-1')">Scelta colore grout <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f3-tema-2')">Ultracolor FA (criticità) <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f3-tema-3')">Grout Refresh (star product) <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f3-tema-4')">Problemi qualità percepita <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f3-tema-5')">Brand awareness sport <span class="arrow">▼</span></button>
+          </div>
+
+          <div id="f3-tema-1" class="tema-panel visible">
+            <div class="tema-panel-label">Commenti esemplificativi,Scelta colore grout</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Mapei warm gray (left) or frost (right)? Can't decide for my new bathroom."<div class="tema-comment-meta">r/Tile · 2026</div></div>
+              <div class="tema-comment">"Chose Charcoal 5047 Mapei grout and it looks white! What happened? Did I use too much water?"<div class="tema-comment-meta">r/Tile · 2026</div></div>
+              <div class="tema-comment">"The color catalog is massive but it's really hard to figure out offline. Anyone have experience with Bone 5015?"<div class="tema-comment-meta">r/Tile · 2025</div></div>
+            </div>
+          </div>
+          <div id="f3-tema-2" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Ultracolor FA (criticità)</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"I weighed and measured my water to grout ratio. Not 2 months later... cracks in almost every joint."<div class="tema-comment-meta">r/Tile · 2026</div></div>
+              <div class="tema-comment">"Use very cold water and hand mix. My experience was positive. But it's not for beginners."<div class="tema-comment-meta">r/Tile · DIY Report · 2026</div></div>
+              <div class="tema-comment">"The pot life is about 30 min max. If you're slow, you're done. Pros love it, DIYers hate it."<div class="tema-comment-meta">r/Tile · 2025</div></div>
+            </div>
+          </div>
+          <div id="f3-tema-3" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Grout Refresh (star product)</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"$13 bathroom upgrade using MAPEI Grout Refresh from Lowe's. Very impressed!"<div class="tema-comment-meta">r/HomeDecorating · 782 upvote</div></div>
+              <div class="tema-comment">"Grout Refresh saved my shower. The old grout was gray and disgusting. Now looks brand new."<div class="tema-comment-meta">r/HomeImprovement · 2025</div></div>
+            </div>
+          </div>
+          <div id="f3-tema-4" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Problemi qualità percepita</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Bubbles, inconsistent surface, cracks. Will not pass wet rag test after 60 hours."<div class="tema-comment-meta">r/Tile · 2026</div></div>
+              <div class="tema-comment">"Anyone having mold issues with Mapei Mapesil T Plus? Customer called me about black spots appearing..."<div class="tema-comment-meta">r/Tile · Pro Tiler · 2026</div></div>
+            </div>
+          </div>
+          <div id="f3-tema-5" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Brand awareness sport</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Colnago C64 Mapei,finally able to build this bike after 5 months of searching."<div class="tema-comment-meta">r/Bikeporn · 334 upvote</div></div>
+              <div class="tema-comment">"Mapei as INDYCAR sponsor is unexpected. But actually makes sense,they build the roads."<div class="tema-comment-meta">r/INDYCAR · 2025</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fd-two-col">
+          <div>
+            <div class="fd-col-label green">Punti di Forza</div>
+            <div class="fd-list">
+              <div class="fd-item pos">
+                <div class="fd-item-title">Grout Refresh: prodotto star con alta viralità</div>
+                <div class="fd-item-body">Il Grout Refresh è il prodotto con sentiment più positivo su Reddit. Post con centinaia di upvote, accessibile in GDO (Lowe's, Home Depot), perfetto per il mercato DIY di entry-level.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"$13 bathroom upgrade. Very impressed!"<div class="fd-quote-meta">r/HomeDecorating · 782 upvote</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Gamma colori riconosciuta come la più ampia</div>
+                <div class="fd-item-body">Mapei è citata come il brand con la gamma colori grout più completa disponibile nei negozi. Questo genera traffico di discussione anche positivo, anche quando il risultato finale delude.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"The color range is massive. No one else has this many options."<div class="fd-quote-meta">r/Tile · 2025</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Brand awareness extra-costruzione (sport)</div>
+                <div class="fd-item-body">La sponsorizzazione sportiva (ciclismo Colnago-Mapei, INDYCAR) genera menzioni positive in community non professionali, ampliando la base di conoscenza del brand.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Colnago C64 Mapei,finally able to build this bike after 5 months of searching."<div class="fd-quote-meta">r/Bikeporn · 334 upvote</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Performance professionale riconosciuta se usato correttamente</div>
+                <div class="fd-item-body">I professionisti che usano Mapei correttamente lo difendono attivamente sui thread: Ultracolor FA e Flexcolor CQ sono visti come prodotti top-tier se applicati con le giuste accortezze.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Use very cold water and hand mix. My experience was positive."<div class="fd-quote-meta">r/Tile · Pro Tiler</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Disponibilità in GDO (Lowe's, Home Depot)</div>
+                <div class="fd-item-body">La presenza capillare nella grande distribuzione americana è vista come un punto di forza rispetto a competitor come Laticrete, disponibili principalmente attraverso canali specializzati.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Easy to find at Lowe's. That's the main reason I chose Mapei for this project."<div class="fd-quote-meta">r/DIY · 2025</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="fd-col-label red">Punti di Criticità</div>
+            <div class="fd-list">
+              <div class="fd-item neg">
+                <div class="fd-item-title">Ultracolor FA: curva di apprendimento troppo ripida per DIYer</div>
+                <div class="fd-item-body">Il prodotto più discusso su r/Tile. Il pot life breve (~30 min), il ratio acqua/polvere critico e la sensibilità alla temperatura lo rendono inadatto per principianti senza adeguata comunicazione preventiva.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"I weighed and measured my water to grout ratio. Not 2 months later... cracks in almost every joint."<div class="fd-quote-meta">r/Tile · 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Colore finale diverso dall'atteso</div>
+                <div class="fd-item-body">Problema strutturale: il colore del grout a secco non corrisponde al campionario o al colore bagnato. I DIYer si trovano con risultati estetici molto diversi dalle aspettative, anche seguendo correttamente le istruzioni.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Chose Charcoal 5047 Mapei grout and it looks white! What happened?"<div class="fd-quote-meta">r/Tile · 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Segnalazioni mold su Mapesil T Plus (2026)</div>
+                <div class="fd-item-body">Thread emergente su r/Tile con segnalazioni di problemi di muffa sul silicone Mapesil T Plus, segnalato da un professionista su chiamata di un cliente. Richiede monitoraggio.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Anyone having mold issues with Mapei Mapesil T Plus? Customer called me about black spots."<div class="fd-quote-meta">r/Tile · Pro Tiler · 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Istruzioni non adeguate al pubblico amateur</div>
+                <div class="fd-item-body">Le schede tecniche sono progettate per professionisti. I DIYer su Reddit si scambiano consigli pratici (acqua fredda, miscelazione manuale) che non compaiono nelle istruzioni ufficiali, segnalando una lacuna comunicativa.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"There's no mention of using cold water in the instructions. This is critical information."<div class="fd-quote-meta">r/Tile · 2025</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Assenza Mapei nelle discussioni B2B/commerciale</div>
+                <div class="fd-item-body">Su Reddit i professionisti che parlano di grandi cantieri commerciali citano prevalentemente Laticrete Spectralock. Mapei è percepita come brand GDO/consumer, non come scelta top-of-mind per i professionisti del segmento premium.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"For commercial jobs I always spec Laticrete. Mapei is fine for residential DIY."<div class="fd-quote-meta">r/Tile · Pro Contractor · 2025</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:8px">Keyword Ricorrenti</div>
+        <div class="kw-list" style="margin-bottom:20px">
+          <span class="kw-tag">grout</span>
+          <span class="kw-tag">Ultracolor FA</span>
+          <span class="kw-tag">Grout Refresh</span>
+          <span class="kw-tag">color</span>
+          <span class="kw-tag">thinset</span>
+          <span class="kw-tag">Flexcolor CQ</span>
+          <span class="kw-tag">shower</span>
+          <span class="kw-tag">pot life</span>
+          <span class="kw-tag">Laticrete</span>
+          <span class="kw-tag">DIY</span>
+        </div>
+
+        <div class="note-box">
+          <h4>Note Analitiche</h4>
+          <p>Reddit è il canale dove il feedback è più autentico e non filtrato. La community r/Tile è dominata da homeowner americani DIYer, un segmento non nativo per Mapei (brand nato per il B2B professionale). Il 34% di sentiment problematico non è necessariamente peggio della media di settore per questo tipo di pubblico, ma la <strong>mancanza totale di presenza Mapei nelle discussioni</strong> (nessun account ufficiale, nessuna risposta dai social team) lascia le critiche senza contraddittorio. Il Grout Refresh è un'opportunità content/community non sfruttata: un prodotto virale senza brand storytelling dedicato.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FONTE 4: SOCIAL MEDIA -->
+  <div id="ftab-fonte4" class="ftab-content">
+    <div class="fonte-card">
+      <div class="fonte-header" style="border-left-color:var(--violet)">
+        <div>
+          <div class="fonte-name">Social Media</div>
+          <div class="fonte-tipo">Instagram @mapei_italia · YouTube Mapei SpA</div>
+        </div>
+        <span class="badge badge-green">91% Positivo</span>
+      </div>
+      <div class="fonte-body">
+        <div class="fonte-kpi-row">
+          <div class="fkpi"><div class="fkpi-val">47.9K</div><div class="fkpi-label">Follower totali</div></div>
+          <div class="fkpi"><div class="fkpi-val">60</div><div class="fkpi-label">Post analizzati</div></div>
+          <div class="fkpi"><div class="fkpi-val" style="color:var(--green)">91%</div><div class="fkpi-label">Sentiment positivo</div></div>
+          <div class="fkpi"><div class="fkpi-val">35,49%</div><div class="fkpi-label">Engagement YouTube</div></div>
+          <div class="fkpi"><div class="fkpi-val">8,79%</div><div class="fkpi-label">Engagement Instagram</div></div>
+        </div>
+
+        <div class="temi-container">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:6px">Temi Principali</div>
+          <div class="temi-help">Clicca su un tema per vedere commenti esemplificativi</div>
+          <div class="temi-list">
+            <button class="tema-tag-btn active" onclick="toggleTema(this,'f4-tema-1')">Impermeabilizzazione <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f4-tema-2')">Sostenibilità <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f4-tema-3')">Formazione e innovazione <span class="arrow">▼</span></button>
+            <button class="tema-tag-btn" onclick="toggleTema(this,'f4-tema-4')">Eventi e inaugurazioni <span class="arrow">▼</span></button>
+          </div>
+
+          <div id="f4-tema-1" class="tema-panel visible">
+            <div class="tema-panel-label">Commenti esemplificativi,Impermeabilizzazione</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Che spettacolo!"<div class="tema-comment-meta">Commento Instagram · Post Purtop poliurea</div></div>
+              <div class="tema-comment">"Ma quanto è bellaaaaaaaa"<div class="tema-comment-meta">Commento Instagram · Post UltraCare Rain Protector</div></div>
+              <div class="tema-comment">"Complimenti agli organizzatori. È stata una esperienza bellissima, formativa e molto professionale."<div class="tema-comment-meta">Commento Instagram · Evento waterproofing</div></div>
+            </div>
+          </div>
+          <div id="f4-tema-2" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Sostenibilità</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Ottima iniziativa, il futuro è la sostenibilità!"<div class="tema-comment-meta">Commento Instagram · Post Mapei Sustainable Solutions</div></div>
+              <div class="tema-comment">"Finalmente un'azienda che fa concretamente qualcosa per l'ambiente."<div class="tema-comment-meta">Commento Instagram · Post green</div></div>
+            </div>
+          </div>
+          <div id="f4-tema-3" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Formazione e innovazione</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Mapei PRO è uno strumento rivoluzionario per i progettisti. Grazie per l'innovazione continua."<div class="tema-comment-meta">Commento Instagram · Post Mapei PRO</div></div>
+              <div class="tema-comment">"sì ma a che serve? ancora non si capisce. Date una risposta"<div class="tema-comment-meta">Commento Instagram · Neutro/critico · Senza risposta brand</div></div>
+            </div>
+          </div>
+          <div id="f4-tema-4" class="tema-panel">
+            <div class="tema-panel-label">Commenti esemplificativi,Eventi e inaugurazioni</div>
+            <div class="tema-comments">
+              <div class="tema-comment">"Onore di collaborare con Mapei per il restauro del Colosseo!"<div class="tema-comment-meta">Commento Instagram · Inaugurazione ambulacri Colosseo</div></div>
+              <div class="tema-comment">"Ho scritto in dm"<div class="tema-comment-meta">Commento Instagram · Neutro · Senza risposta brand</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fd-two-col">
+          <div>
+            <div class="fd-col-label green">Punti di Forza</div>
+            <div class="fd-list">
+              <div class="fd-item pos">
+                <div class="fd-item-title">Alto engagement YouTube (35,49%)</div>
+                <div class="fd-item-body">Il canale YouTube ottiene un engagement eccezionale (121.2K views medie) per un brand B2B industriale. I contenuti tecnici e formativi funzionano molto bene su questo canale.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"121K media views per video per un canale con 13.6K follower: un ratio eccellente."<div class="fd-quote-meta">Analisi social · Maggio 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Tono di voce coerente e professionale</div>
+                <div class="fd-item-body">La comunicazione sui canali istituzionali è coerente, professionale e tecnica, in linea con il posizionamento B2B del brand. Nessuna incongruenza di tono rilevata nel periodo analizzato.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Professionalità e coerenza alta: il brand non prende posizioni rischiose né pubblica contenuti fuori tema."<div class="fd-quote-meta">Analisi social · Maggio 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Sentiment quasi unanimemente positivo (91%)</div>
+                <div class="fd-item-body">Dei 55 commenti analizzati, 40 sono positivi, 3 neutri e solo 1 negativo. La community che segue i canali istituzionali è già coinvolta e favorevole al brand.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Complimenti agli organizzatori. È stata un'esperienza bellissima, formativa e molto professionale."<div class="fd-quote-meta">Commento Instagram</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Contenuti su temi ad alto interesse (impermeabilizzazione)</div>
+                <div class="fd-item-body">I contenuti sull'impermeabilizzazione (10 post) e sulla sostenibilità (6 post) sono i più performanti, in linea con i trend di settore e con le esigenze informative dei professionisti.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Proteggi il balcone dalle infiltrazioni,post con alto engagement e commenti positivi."<div class="fd-quote-meta">Analisi Instagram · Maggio 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item pos">
+                <div class="fd-item-title">Progetto Colosseo: contenuto istituzionale di alto valore</div>
+                <div class="fd-item-body">La partecipazione al restauro degli ambulacri meridionali del Colosseo è un contenuto ad altissimo potenziale di PR e brand awareness, che valorizza l'heritage tecnico del brand.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Inaugurazione della nuova area archeologica degli ambulacri meridionali del Colosseo."<div class="fd-quote-meta">Post Instagram · World Heritage Day</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="fd-col-label red">Punti di Criticità</div>
+            <div class="fd-list">
+              <div class="fd-item neg">
+                <div class="fd-item-title">Nessuna risposta ai commenti dei follower</div>
+                <div class="fd-item-body">Commenti con domande dirette ("sì ma a che serve?", "ho scritto in dm") rimangono senza risposta. Questo segnala un approccio broadcast, non dialogico, che limita la costruzione di community.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"sì ma a che serve? ancora non si capisce. Date una risposta"<div class="fd-quote-meta">Commento Instagram · Senza risposta brand</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Contenuto prevalentemente istituzionale, poca autenticità</div>
+                <div class="fd-item-body">I 60 post analizzati mostrano un approccio top-down: comunicati, inaugurazioni, prodotti. Mancano contenuti behind-the-scenes, user-generated, o storie di cantiere reali che aumentino l'engagement organico.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Aumentare l'interazione con il pubblico sui social. Espandere la comunicazione su progetti reali e casi studio."<div class="fd-quote-meta">Analisi strategica social · Maggio 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Follower Instagram limitati (34.3K) per un leader mondiale</div>
+                <div class="fd-item-body">Con €4,4 miliardi di fatturato e 106 stabilimenti globali, 34.3K follower su Instagram Italia sono un numero molto contenuto. La presenza digitale non è proporzionata alla dimensione aziendale.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"34.3K follower @mapei_italia vs 60K+ Facebook: il canale Instagram non è ancora il presidio principale."<div class="fd-quote-meta">Analisi social · Maggio 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Assenza di contenuto B2C e DIY</div>
+                <div class="fd-item-body">I social italiani si rivolgono esclusivamente a un pubblico professionale. Nessun contenuto per il mercato consumer o DIY, che è invece quello che genera più discussioni (e problemi) online.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Focus su impermeabilizzazione, sostenibilità e innovazione: tutti temi B2B. Zero contenuto consumer."<div class="fd-quote-meta">Analisi social · Maggio 2026</div></div>
+                </div>
+              </div>
+              <div class="fd-item neg">
+                <div class="fd-item-title">Gap tra canali italiani e internazionali</div>
+                <div class="fd-item-body">I problemi reputazionali più gravi emergono sui canali anglofoni (Trustpilot UK/US, Reddit), mentre i social italiani mostrano un sentiment molto positivo. Questo gap non viene colmato da nessuna strategia di risposta coordinata.</div>
+                <div class="fd-quotes">
+                  <div class="fd-quote">"Social IT: 91% positivo. Trustpilot INT: 65% negativo. Il brand vive in bolle separate."<div class="fd-quote-meta">Analisi cross-fonte · Maggio 2026</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-text);margin-bottom:8px">Keyword Ricorrenti</div>
+        <div class="kw-list" style="margin-bottom:20px">
+          <span class="kw-tag">impermeabilizzazione</span>
+          <span class="kw-tag">sostenibilità</span>
+          <span class="kw-tag">poliurea</span>
+          <span class="kw-tag">formazione</span>
+          <span class="kw-tag">Mapei PRO</span>
+          <span class="kw-tag">rinforzo strutturale</span>
+          <span class="kw-tag">Colosseo</span>
+          <span class="kw-tag">innovazione</span>
+        </div>
+
+        <div class="note-box">
+          <h4>Note Analitiche</h4>
+          <p>I social istituzionali mostrano un brand che <strong>comunica bene verso l'interno della sua community</strong> ma non dialoga con essa. Il sentiment eccellente (91%) è rassicurante ma potrebbe riflettere una selezione naturale del pubblico già fidelizzato. La priorità è attivare una <strong>content strategy differenziata per segmento</strong> (B2B tecnico vs consumer/DIY) e introdurre gestione attiva dei commenti. Il canale YouTube è sottovalutato: con 35,49% di engagement è il mezzo più performante e andrebbe potenziato con contenuti tutorial e case study.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="preview-blur"></div>
+<div class="preview-gate">
+  <div class="preview-gate-label">Anteprima limitata</div>
+  <h3>Feedback Clienti · Versione Completa</h3>
+  <p>L'analisi integrale di Google Maps, Trustpilot, Reddit e social istituzionali &mdash; con i temi ricorrenti per fonte e i commenti verbatim &mdash; è riservata alla versione completa del report.</p>
+  <a class="preview-cta" href="mailto:andrea.sportillo@mocainteractive.com?subject=Richiesta%20analisi%20completa%20Mapei">Richiedi l'analisi completa</a>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 4: VISIBILITÀ AI -->
+<div id="ai" class="preview-section">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 4</div>
+    <div class="section-title">Visibilità AI</div>
+    <div class="section-subtitle">Presenza del brand nelle risposte generate da AI engine (AEO/GEO Audit) · Fonte: SEOZoom · Maggio 2026</div>
+  </div>
+
+  <div class="metric-section" style="margin-bottom:40px">
+    <div class="metric-row">
+      <div class="metric-left">
+        <div class="metric-big-val orange">87<span class="metric-unit">/100</span></div>
+        <div class="metric-label">AEO Score Medio</div>
+        <div class="metric-source">Fonte: SEOZoom AEO Audit</div>
+      </div>
+      <div class="metric-right">
+        <div class="metric-comment">Mapei ha una visibilità AI eccellente: è riconosciuta come leader di mercato da tutti e tre i principali AI engine, con score omogenei e alti.</div>
+        <div class="metric-body">Lo score AEO medio di 87/100 (ChatGPT 85, Perplexity 87, Gemini 89) posiziona Mapei nella fascia "alto" su tutti gli engine analizzati. Il brand viene descritto come leader mondiale nei prodotti chimici per l'edilizia, con forte riconoscimento della storia (80+ anni), del fatturato (4,2 miliardi euro 2023) e della presenza globale. Il GEO Audit evidenzia però una criticità geografica alta: la sede primaria identificata è Vimercate, con confusione frequente tra sede legale (Milano) e produttiva.</div>
+        <div class="note-inline">
+          <div class="note-inline-label">Come viene calcolato l'AEO Score</div>
+          Il punteggio AEO di SEOZoom è composito: Qualità della presenza (max 20), Riconoscimento del brand (max 20), Sentiment del brand (max 40), Posizione di mercato (max 10), Share of Voice (max 10). Mapei ottiene punteggi alti su tutte le dimensioni, con il sentiment come area di maggior variazione tra engine.
+        </div>
+        <div class="rog-row">
+          <div class="rog-card rischio">
+            <div class="rog-card-label">Rischio</div>
+            <p>Le AI non citano le criticità emerse su Trustpilot e Reddit (qualità prodotti consumer, customer service). Una narrativa AI troppo positiva può creare aspettative non allineate all'esperienza reale.</p>
+          </div>
+          <div class="rog-card azione">
+            <div class="rog-card-label">Azione</div>
+            <p>Alimentare le fonti citate dagli AI (Wikipedia, sito ufficiale, stampa specializzata) con contenuti aggiornati che includano le iniziative di miglioramento della customer experience e della sostenibilità.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Come l'AI Descrive il Brand</div>
+  <div class="ai-narrative-box" style="margin-bottom:32px">
+    <div class="ai-narrative-label">Sintesi delle Risposte AI</div>
+    <p>Nelle query analizzate, <strong>ChatGPT</strong> descrive Mapei come un brand con archetipo "Tradizionalista": eccellenza storica, affidabilità decennale, qualità dei prodotti come valore cardine. <strong>Perplexity</strong> adotta un frame "Innovatore": enfatizza la transizione ecologica, i nuovi mercati, la diversificazione in nicchie specializzate (industria navale, gallerie, sotterranei). <strong>Gemini</strong> combina i due approcci, con forte enfasi sul fatturato di €4,2 miliardi e sulla presenza capillare in 100+ paesi. Tutti e tre gli engine ignorano sistematicamente i problemi di customer experience e qualità percepita che emergono dalle piattaforme di recensione pubblica.</p>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Score per Engine</div>
+  <div class="ai-engine-grid" style="margin-bottom:40px">
+    <div class="ai-engine-card" style="border-top-color:#10a37f">
+      <div class="ai-engine-name" style="color:#10a37f">OpenAI ChatGPT</div>
+      <div class="ai-score-big">85<span>/100</span></div>
+      <div class="ai-mini-grid">
+        <div class="ai-mini"><div class="ai-mini-val">78</div><div class="ai-mini-label">Sentiment Score</div></div>
+        <div class="ai-mini"><div class="ai-mini-val" style="color:var(--red)">9/10</div><div class="ai-mini-label">Share of Voice</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">Leader</div><div class="ai-mini-label">Pos. Mercato</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">9/10</div><div class="ai-mini-label">Qualità Fonti</div></div>
+      </div>
+    </div>
+    <div class="ai-engine-card" style="border-top-color:#20808d">
+      <div class="ai-engine-name" style="color:#20808d">Perplexity AI</div>
+      <div class="ai-score-big" style="color:var(--orange)">87<span>/100</span></div>
+      <div class="ai-mini-grid">
+        <div class="ai-mini"><div class="ai-mini-val">82</div><div class="ai-mini-label">Sentiment Score</div></div>
+        <div class="ai-mini"><div class="ai-mini-val" style="color:var(--red)">9/10</div><div class="ai-mini-label">Share of Voice</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">Leader</div><div class="ai-mini-label">Pos. Mercato</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">9/10</div><div class="ai-mini-label">Qualità Fonti</div></div>
+      </div>
+    </div>
+    <div class="ai-engine-card" style="border-top-color:#4285F4">
+      <div class="ai-engine-name" style="color:#4285F4">Google Gemini</div>
+      <div class="ai-score-big" style="color:var(--green)">89<span>/100</span></div>
+      <div class="ai-mini-grid">
+        <div class="ai-mini"><div class="ai-mini-val" style="color:var(--green)">85</div><div class="ai-mini-label">Sentiment Score</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">9/10</div><div class="ai-mini-label">Share of Voice</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">Leader</div><div class="ai-mini-label">Pos. Mercato</div></div>
+        <div class="ai-mini"><div class="ai-mini-val">10/10</div><div class="ai-mini-label">Qualità Fonti</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Comprensione del Brand da parte dell'AI</div>
+  <div class="ai-comprehension-grid">
+    <div class="ai-comp-col sa">
+      <div class="ai-comp-col-label">Cosa l'AI Capisce Bene</div>
+      <ul>
+        <li><strong>Leadership globale con 80+ anni di storia</strong>: tutti gli engine citano correttamente la fondazione nel 1937 e il posizionamento come tra i maggiori produttori mondiali di prodotti chimici per l'edilizia.</li>
+        <li><strong>Fatturato e dimensione aziendale</strong>: €4,2-4,4 miliardi, secondo produttore chimico italiano per vendite globali (dopo Versalis/ENI), citato con precisione da Perplexity.</li>
+        <li><strong>Gamma prodotti completa e integrata</strong>: 25+ linee prodotto, copertura dell'intero ecosistema edilizio, riconosciuta da tutti e tre gli engine come vantaggio competitivo strutturale.</li>
+        <li><strong>Presenza globale in 100+ paesi</strong>: rete di 106 stabilimenti produttivi locali come strategia di vicinanza ai mercati, citata correttamente da GPT e Gemini.</li>
+        <li><strong>Investimento in R&D</strong>: 38 centri di ricerca globali, innovazione continua nelle specialty chemicals, identificata da Perplexity come traiettoria di crescita positiva.</li>
+        <li><strong>Traiettoria di crescita positiva</strong>: fatturato in crescita costante 2013-2024 (+130% nel decennio), confermata da tutti gli engine come indicatore di solidità strategica.</li>
+        <li><strong>Posizionamento professionale B2B</strong>: brand di riferimento per adesivi, impermeabilizzanti e restauro presso applicatori professionisti e ingegneri.</li>
+      </ul>
+    </div>
+    <div class="ai-comp-col non-sa">
+      <div class="ai-comp-col-label">Aree di Incomprensione o Distorsione</div>
+      <ul>
+        <li><strong>Sede aziendale confusa</strong>: alcune fonti AI citano Milano come sede principale, ignorando la distinzione tra sede legale (Milano) e sede produttiva/centrale di Settimo Milanese/Vimercate. Il GEO Audit classifica questo come "criticità alta".</li>
+        <li><strong>Ignorano le criticità consumer</strong>: nessun engine menziona i problemi di customer service, di qualità percepita sui grout o le recensioni negative su Trustpilot (2.3/5). La narrativa AI è sistematicamente più positiva dell'esperienza reale B2C.</li>
+        <li><strong>Kerakoll sottorappresentata come competitor nazionale</strong>: gli engine enfatizzano il confronto con Sika (internazionale) e ignorano il duello quotidiano con Kerakoll nel contesto italiano, che è il più rilevante per i professionisti locali.</li>
+        <li><strong>Sostenibilità sovrastimata narrativamente</strong>: l'AI descrive Mapei come avanzata nella sostenibilità, ma non rileva il gap comunicativo rispetto a Kerakoll né le criticità legate all'EU ETS e ai costi energetici.</li>
+        <li><strong>Segmentazione B2B vs B2C assente</strong>: l'AI non distingue la qualità percepita nei due segmenti, descrivendo un brand omogeneo quando invece esistono due esperienze molto diverse tra professionisti e consumatori finali.</li>
+        <li><strong>Non cita la Mapei Academy come asset reputazionale</strong>: nonostante i corsi siano il punto di forza su Trustpilot, nessun engine la menziona come leva di differenziazione formativa.</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:11px;color:#bbb;margin-top:8px;margin-bottom:32px">Analisi basata su un campione di query testate su ciascun engine. Fonte: SEOZoom AEO/GEO Audit · Maggio 2026</p>
+
+  <div class="section-eyebrow" style="margin-bottom:12px">Confronto Visibilità AI vs Competitor</div>
+  <div class="ai-comp-table-wrap" style="margin-bottom:8px">
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>ChatGPT Score</th>
+          <th>Perplexity Score</th>
+          <th>Gemini Score</th>
+          <th>Share of Voice</th>
+          <th>Sentiment prevalente</th>
+          <th>Archetipo AI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="client-row">
+          <td><strong style="color:var(--red)">Mapei ←</strong></td>
+          <td><span class="ai-score-pill alto">85</span></td>
+          <td><span class="ai-score-pill alto">87</span></td>
+          <td><span class="ai-score-pill alto">89</span></td>
+          <td><div class="ai-sov-bar"><div class="ai-sov-fill client" style="width:90%"></div></div><br><small>9/10</small></td>
+          <td>Positivo (80/100)</td>
+          <td>Tradizionalista / Innovatore</td>
+        </tr>
+        <tr>
+          <td>Sika AG</td>
+          <td><span class="ai-score-pill alto">88</span></td>
+          <td><span class="ai-score-pill alto">86</span></td>
+          <td><span class="ai-score-pill alto">90</span></td>
+          <td><div class="ai-sov-bar"><div class="ai-sov-fill" style="width:95%"></div></div><br><small>9.5/10</small></td>
+          <td>Positivo</td>
+          <td>Innovatore globale</td>
+        </tr>
+        <tr>
+          <td>Kerakoll</td>
+          <td><span class="ai-score-pill medio">62</span></td>
+          <td><span class="ai-score-pill medio">65</span></td>
+          <td><span class="ai-score-pill medio">60</span></td>
+          <td><div class="ai-sov-bar"><div class="ai-sov-fill" style="width:40%"></div></div><br><small>4/10</small></td>
+          <td>Positivo</td>
+          <td>Green Builder</td>
+        </tr>
+        <tr>
+          <td>Laticrete</td>
+          <td><span class="ai-score-pill medio">58</span></td>
+          <td><span class="ai-score-pill medio">68</span></td>
+          <td><span class="ai-score-pill medio">55</span></td>
+          <td><div class="ai-sov-bar"><div class="ai-sov-fill" style="width:35%"></div></div><br><small>3.5/10</small></td>
+          <td>Neutro</td>
+          <td>Specialista professionale</td>
+        </tr>
+        <tr>
+          <td>Bostik (Arkema)</td>
+          <td><span class="ai-score-pill medio">52</span></td>
+          <td><span class="ai-score-pill medio">50</span></td>
+          <td><span class="ai-score-pill basso">45</span></td>
+          <td><div class="ai-sov-bar"><div class="ai-sov-fill" style="width:25%"></div></div><br><small>2.5/10</small></td>
+          <td>Neutro</td>
+          <td>Generalista</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-bottom:0">
+    Livelli score: <strong style="color:var(--green)">Alto</strong> (&gt;70) · <strong style="color:var(--orange)">Medio</strong> (40-70) · <strong style="color:var(--red)">Basso</strong> (&lt;40) &nbsp;·&nbsp; Fonte: SEOZoom AEO Audit · Maggio 2026. Dati competitor stimati.
+  </p>
+</div>
+<div class="preview-blur"></div>
+<div class="preview-gate">
+  <div class="preview-gate-label">Anteprima limitata</div>
+  <h3>Visibilità AI · Versione Completa</h3>
+  <p>Lo scoring AEO per ChatGPT, Perplexity e Gemini, il confronto competitor e il GEO audit completo sono disponibili nella versione integrale del report.</p>
+  <a class="preview-cta" href="mailto:andrea.sportillo@mocainteractive.com?subject=Richiesta%20analisi%20completa%20Mapei">Richiedi l'analisi completa</a>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 5: OPPORTUNITÀ -->
+<div id="opportunita" class="section-bg preview-section preview-section-bg">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 5</div>
+    <div class="section-title">Opportunità Strategiche</div>
+    <div class="section-subtitle">Tutte le opportunità emerse dall'analisi cross-fonte, organizzate per area tematica</div>
+  </div>
+
+  <div class="opp-intro">
+    <p>Dall'analisi integrata di <strong>6 fonti</strong> emergono 8 aree di opportunità concrete. La maggior parte non richiede investimenti in innovazione di prodotto, ma un riposizionamento della gestione reputazionale e della comunicazione. Il potenziale impatto sul rating medio stimato, con azioni coordinate a 6 mesi, è di +0.5/1 punto su Google Maps e di un miglioramento significativo del sentiment Trustpilot. Le azioni correlate sono dettagliate nell'Action Plan.</p>
+  </div>
+
+  <div class="opp-grid">
+    <div class="opp-card">
+      <div class="opp-card-tag">Reputazione</div>
+      <div class="opp-card-title">Programma sistematico di risposta alle recensioni</div>
+      <div class="opp-card-body">Attivare un processo strutturato di risposta a tutte le recensioni su Google Maps e Trustpilot, con target 80% tasso di risposta entro 6 mesi. Ogni 1 stella deve ricevere una risposta entro 48 ore, con processo di escalation definito. L'impatto stimato è di +0.3/0.5 punti sul rating medio Google Maps e di un miglioramento percepibile del sentiment Trustpilot.</div>
+      <div class="opp-card-fonte">Emersa da: Google Maps · Trustpilot</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">Contenuto</div>
+      <div class="opp-card-title">Comunicazione differenziata per consumatori finali e fai-da-te su prodotti professionali</div>
+      <div class="opp-card-body">Sviluppare una linea di contenuti dedicata ai consumatori finali e agli appassionati di fai-da-te per prodotti come Ultracolor FA: video tutorial con istruzioni semplificate, domande frequenti su tempi di lavorabilità e temperatura d'uso, guida alla scelta del colore. Ridurre la frustrazione da "prodotto troppo difficile" può trasformare esperienze negative in passaparola positivo.</div>
+      <div class="opp-card-fonte">Emersa da: Reddit · Trustpilot</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">AI Visibility</div>
+      <div class="opp-card-title">Ottimizzazione GEO per sede e prodotti (criticità geografica alta)</div>
+      <div class="opp-card-body">Il GEO Audit segnala "criticità alta" sulla rilevanza geografica: gli AI confondono sede legale e produttiva. Strutturare contenuti con markup Schema specifici per sedi (LocalBusiness), FAQ per prodotto e pagine dedicate per mercati locali (IT, UK, US) alimenta una narrativa AI più precisa e differenziata.</div>
+      <div class="opp-card-fonte">Emersa da: GEO Audit · AEO Audit</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">Content/Social</div>
+      <div class="opp-card-title">Grout Refresh come leva di notorietà sul pubblico consumer</div>
+      <div class="opp-card-body">Il Grout Refresh è il prodotto con il sentiment più positivo su Reddit (un post raggiunge 782 voti positivi), ma non è mai stato oggetto di una campagna dedicata sui canali italiani. Sviluppare contenuti generati dagli utenti (foto prima/dopo, tutorial) su questo prodotto può generare notorietà spontanea nel segmento consumer con un investimento minimo.</div>
+      <div class="opp-card-fonte">Emersa da: Reddit · Social Media</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">Brand</div>
+      <div class="opp-card-title">Narrativa sostenibilità potenziata con dati e certificazioni</div>
+      <div class="opp-card-body">La Linea Zero esiste ma non è comunicata con l'efficacia emotiva con cui Kerakoll ha costruito il posizionamento "GreenBuilding". Sviluppare un hub comunicativo dedicato con EPD certificate, storie LCA, e dati quantitativi sulla riduzione CO₂ per singolo prodotto. Impatto diretto sulla percezione AI (che oggi non la cita) e sul segmento architettura/procurement pubblico.</div>
+      <div class="opp-card-fonte">Emersa da: Social · GEO Audit · AEO Audit · Gemini.MD</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">Customer Experience</div>
+      <div class="opp-card-title">Revisione sistema garanzie consumer con comunicazione trasparente</div>
+      <div class="opp-card-body">Le recensioni negative su garanzie (Trustpilot UK, IT) segnalano un sistema percepito come opaco e non vincolante. Pubblicare criteri chiari di validazione garanzia, un processo di reclamo accessibile e case history di garanzie onorate può trasformare un punto critico in un elemento di fiducia differenziante.</div>
+      <div class="opp-card-fonte">Emersa da: Trustpilot</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">Social Media</div>
+      <div class="opp-card-title">Attivazione strategia di engagement community</div>
+      <div class="opp-card-body">I commenti social rimangono senza risposta, le domande dirette ignorate. Introdurre un presidio attivo dei commenti (risposte entro 24h) e contenuti interattivi (sondaggi, domande, challenge) può aumentare l'engagement organico e ridurre la percezione di brand distante e istituzionale.</div>
+      <div class="opp-card-fonte">Emersa da: Social Media</div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-card-tag">Packaging</div>
+      <div class="opp-card-title">Sistema di packaging differenziato per segmento consumer</div>
+      <div class="opp-card-body">La critica al packaging confuso e indifferenziato emerge sia su Trustpilot che su Reddit. Sviluppare un sistema di visual coding più chiaro (colori, icone, livello di difficoltà) per i prodotti destinati alla GDO e al mercato DIY può ridurre gli errori di applicazione e il conseguente sentiment negativo.</div>
+      <div class="opp-card-fonte">Emersa da: Trustpilot · Reddit</div>
+    </div>
+  </div>
+</div>
+<div class="preview-blur"></div>
+<div class="preview-gate">
+  <div class="preview-gate-label">Anteprima limitata</div>
+  <h3>Opportunità Strategiche · Riservate</h3>
+  <p>Le 8 aree di opportunità emerse dall'analisi cross-fonte, con impatto stimato e fonte di evidenza, sono disponibili nella versione completa del report.</p>
+  <a class="preview-cta" href="mailto:andrea.sportillo@mocainteractive.com?subject=Richiesta%20analisi%20completa%20Mapei">Richiedi l'analisi completa</a>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 6: STRATEGIA -->
+<div id="strategia" class="preview-section">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 6</div>
+    <div class="section-title">Strategia</div>
+    <div class="section-subtitle">Focus strategico e priorità di intervento basate sull'analisi cross-fonte</div>
+  </div>
+
+  <div class="strategic-intro">
+    <div class="strategic-intro-label">Lettura Strategica</div>
+    <p>Mapei è un brand con una <strong>reputazione tecnica B2B solidissima</strong> e una visibilità AI eccellente (87/100), ma con un <strong>marcato divario reputazionale</strong> tra la percezione professionale e quella consumer. I problemi non sono di prodotto nel senso stretto, ma di comunicazione, supporto e gestione delle aspettative di un pubblico (gli appassionati di fai-da-te) che non è il target nativo del brand. La strategia deve lavorare su due binari paralleli: <strong>difendere e consolidare la reputazione B2B</strong> dove è già eccellente, e <strong>costruire da zero una presenza reputazionale gestita nel segmento consumer</strong>, attivando presidio delle piattaforme pubbliche, contenuti dedicati e un sistema di risposta sistematica.</p>
+  </div>
+
+  <div class="focus-grid">
+    <div class="focus-card">
+      <div class="focus-num">Focus 01</div>
+      <div class="focus-title">Reputation Recovery sulle Piattaforme Pubbliche</div>
+      <div class="focus-body">
+        <p>Il tasso di risposta 0% su Google Maps e Trustpilot è la criticità più urgente. Ogni recensione negativa senza risposta è un danno reputazionale permanente e misurabile. Attivare un presidio di risposta sistematico (target: 80% di tasso di risposta entro Q3 2026) con tone of voice definito, processo di escalation interno e template di risposta per cluster tematico.</p>
+        <p>Parallelamente, implementare un programma di stimolo alla raccolta di recensioni positive attraverso i touchpoint già presidiati: partecipanti alla Mapei Academy, distributori certificati, clienti con contratti attivi. Obiettivo: bilanciare la distribuzione su Trustpilot da 2.3/5 a 3.2+/5 entro 12 mesi.</p>
+      </div>
+    </div>
+    <div class="focus-card">
+      <div class="focus-num">Focus 02</div>
+      <div class="focus-title">Comunicazione Differenziata B2B/Consumer</div>
+      <div class="focus-body">
+        <p>I canali social italiani comunicano esclusivamente al pubblico professionale, mentre i problemi più gravi emergono sul mercato consumer (DIY, privati). Sviluppare una linea editoriale dedicata al segmento consumer: video tutorial semplificati, guida alla scelta del colore grout, FAQ prodotto accessibili su YouTube e Instagram Reels.</p>
+        <p>Il Grout Refresh è il prodotto con il più alto potenziale virale in questo segmento: sviluppare una campagna UGC dedicata (before/after) può generare awareness organica con investimento limitato e capitalizzare il sentiment già positivo che esiste su Reddit.</p>
+      </div>
+    </div>
+    <div class="focus-card">
+      <div class="focus-num">Focus 03</div>
+      <div class="focus-title">Consolidamento e Ottimizzazione della Presenza AI</div>
+      <div class="focus-body">
+        <p>Con un AEO score di 87/100, Mapei è già in una posizione eccellente, ma ci sono aree di miglioramento strutturale: la criticità geografica alta del GEO Audit richiede un intervento SEO tecnico (markup LocalBusiness, NAP consistency, pagine di sede ottimizzate) per eliminare la confusione sede legale/produttiva.</p>
+        <p>Alimentare sistematicamente le fonti citate dagli AI (Wikipedia, sito ufficiale, stampa specializzata) con contenuti aggiornati che includano la Mapei Academy, la Linea Zero e i dati di sostenibilità. L'obiettivo è che le AI descrivano Mapei con la stessa complessità narrativa che Mapei si attribuisce internamente.</p>
+      </div>
+    </div>
+    <div class="focus-card">
+      <div class="focus-num">Focus 04</div>
+      <div class="focus-title">Sostenibilità come Leva Narrativa Differenziante</div>
+      <div class="focus-body">
+        <p>Kerakoll ha costruito il proprio vantaggio competitivo su una narrativa "Green Building" efficace emotivamente, non solo tecnicamente. Mapei ha la Linea Zero, le EPD, i centri di ricerca e l'impegno verso i CAM, ma non li comunica con lo stesso impatto. Sviluppare un hub digitale dedicato alla sostenibilità con dati LCA per prodotto, storie di cantiere sostenibili, certificazioni LEED/BREEAM supportate da Mapei.</p>
+        <p>Questo intervento ha impatto sia sul procurement pubblico (CAM), sia sulla percezione AI (che oggi non cita la sostenibilità come punto di forza), sia sul segmento architettura e progettazione, sempre più sensibile agli impatti ambientali.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="preview-blur"></div>
+<div class="preview-gate">
+  <div class="preview-gate-label">Anteprima limitata</div>
+  <h3>Strategia · Riservata</h3>
+  <p>I focus strategici, le priorità di intervento e la roadmap reputazionale completa sono riservati alla versione integrale del report.</p>
+  <a class="preview-cta" href="mailto:andrea.sportillo@mocainteractive.com?subject=Richiesta%20analisi%20completa%20Mapei">Richiedi l'analisi completa</a>
+</div>
+</div>
+<div class="section-divider"></div>
+
+<!-- SEZIONE 7: ACTION PLAN -->
+<div id="action-plan" class="preview-section">
+<div class="section-wrap">
+  <div class="section-header">
+    <div class="section-eyebrow">Sezione 7</div>
+    <div class="section-title">Action Plan</div>
+    <div class="section-subtitle">Il piano d'azione prioritizzato è disponibile nello spreadsheet dedicato · aggiornato in tempo reale</div>
+  </div>
+
+  <div class="action-placeholder-box">
+    <div style="margin-bottom:16px">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:.35">
+        <rect x="4" y="4" width="36" height="36" rx="4" stroke="#191919" stroke-width="2"/>
+        <line x1="4" y1="14" x2="40" y2="14" stroke="#191919" stroke-width="1.5"/>
+        <line x1="4" y1="22" x2="40" y2="22" stroke="#191919" stroke-width="1.5"/>
+        <line x1="4" y1="30" x2="40" y2="30" stroke="#191919" stroke-width="1.5"/>
+        <line x1="15" y1="14" x2="15" y2="40" stroke="#191919" stroke-width="1.5"/>
+        <line x1="27" y1="14" x2="27" y2="40" stroke="#191919" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="action-ph-title">Action Plan su Spreadsheet</div>
+    <div class="action-ph-sub">
+      Le azioni prioritizzate per impatto reputazionale, il timeframe di intervento e il ruolo Moca sono documentati nello spreadsheet dedicato, consultabile e aggiornabile in autonomia.
+    </div>
+    <a href="#" target="_blank" class="action-spreadsheet-btn">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+        <line x1="1" y1="6" x2="17" y2="6" stroke="white" stroke-width="1.2"/>
+        <line x1="1" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.2"/>
+        <line x1="1" y1="14" x2="17" y2="14" stroke="white" stroke-width="1.2"/>
+        <line x1="7" y1="6" x2="7" y2="17" stroke="white" stroke-width="1.2"/>
+        <line x1="12" y1="6" x2="12" y2="17" stroke="white" stroke-width="1.2"/>
+      </svg>
+      Apri Action Plan
+    </a>
+  </div>
+
+  <div class="action-priority-legend">
+    <span style="font-size:11px;font-weight:700;color:var(--gray-text);text-transform:uppercase;letter-spacing:.06em">Legenda priorità:</span>
+    <span><strong style="color:var(--red)">P1</strong> Azione immediata (0-60 gg)</span>
+    <span><strong style="color:var(--orange)">P2</strong> Breve termine (1-3 mesi)</span>
+    <span><strong style="color:#966A00">P3</strong> Medio termine (3-6 mesi)</span>
+    <span><strong style="color:var(--gray-text)">P4</strong> Backlog / Evolutivo</span>
+  </div>
+</div>
+<div class="preview-blur"></div>
+<div class="preview-gate">
+  <div class="preview-gate-label">Anteprima limitata</div>
+  <h3>Action Plan · Riservato</h3>
+  <p>L'Action Plan prioritizzato &mdash; con timeline, owner e impatto reputazionale stimato &mdash; è disponibile su spreadsheet condiviso nella versione completa del report.</p>
+  <a class="preview-cta" href="mailto:andrea.sportillo@mocainteractive.com?subject=Richiesta%20analisi%20completa%20Mapei">Richiedi l'analisi completa</a>
+</div>
+</div>
+
+<footer>
+  <p>Analisi Reputazione Digitale &nbsp;·&nbsp; Mapei &nbsp;·&nbsp; Maggio 2026 &nbsp;·&nbsp; Moca Interactive</p>
+  <img src="https://mocainteractive.com/assets/svg/logo-light.svg" alt="moca interactive" height="22">
+</footer>
+
+<script>
+function showFtab(id, btn) {
+  document.querySelectorAll('.ftab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.ftab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('ftab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function toggleTema(btn, panelId) {
+  const panel = document.getElementById(panelId);
+  const wasVisible = panel.classList.contains('visible');
+  const container = btn.closest('.temi-container');
+  container.querySelectorAll('.tema-panel').forEach(p => p.classList.remove('visible'));
+  container.querySelectorAll('.tema-tag-btn').forEach(b => b.classList.remove('active'));
+  if (!wasVisible) {
+    panel.classList.add('visible');
+    btn.classList.add('active');
+  }
+}
+
+window.addEventListener('scroll', function() {
+  const sections = ['executive','mercato','posizionamento','feedback','ai','opportunita','strategia','action-plan'];
+  const links = document.querySelectorAll('nav a');
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && window.scrollY >= el.offsetTop - 80) current = id;
+  });
+  links.forEach(a => {
+    a.classList.remove('active');
+    if(a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
