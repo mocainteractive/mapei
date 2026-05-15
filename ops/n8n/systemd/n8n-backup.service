@@ -1,0 +1,13 @@
+[Unit]
+Description=n8n workflow backup to Git
+After=docker.service network-online.target
+Requires=docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/default/n8n-backup
+ExecStart=/usr/local/sbin/n8n-backup
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
